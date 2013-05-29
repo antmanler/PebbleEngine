@@ -14,4 +14,4 @@ Based and modifed on:
    * [Python](http://www.python.org)
    
 
-see demo videos: [youku](http://u.youku.com/antmanler), [youtube](http://www.youtube.com/watch?v=5yFNOv7pJCk)
+see demo videos: [youku](http://u.youku.com/antmanler), [youtube](http://youtu.be/-qzWQLhBo84)
