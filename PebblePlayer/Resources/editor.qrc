@@ -1,0 +1,13 @@
+<RCC>
+  <qresource>
+    <file>textures/white.tga</file>
+    <file>overlays/panel.material.xml</file>
+    <file>overlays/logo.tga</file>
+    <file>overlays/logo.material.xml</file>
+    <file>pipelines/globalSettings.material.xml</file>
+    <file>pipelines/simple.pipeline.xml</file>
+    <file>shaders/overlay.shader</file>
+    <file>overlays/font.material.xml</file>
+    <file>overlays/font.tga</file>
+  </qresource>
+</RCC>

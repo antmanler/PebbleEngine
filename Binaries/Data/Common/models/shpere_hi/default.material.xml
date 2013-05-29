@@ -1,0 +1,4 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+</Material>

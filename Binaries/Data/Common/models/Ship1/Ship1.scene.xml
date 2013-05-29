@@ -1,0 +1,59 @@
+<Model name="Ship1" geometry="models/Ship1/Ship1.geo">
+
+	<Mesh name="" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="0" batchCount="5160" vertRStart="0" vertREnd="5113" />
+	<Mesh name="_2" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="5160" batchCount="72" vertRStart="5114" vertREnd="5179" />
+	<Mesh name="_3" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="5232" batchCount="72" vertRStart="5180" vertREnd="5242" />
+	<Mesh name="_4" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="5304" batchCount="11628" vertRStart="5243" vertREnd="16438" />
+	<Mesh name="_5" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="16932" batchCount="6" vertRStart="16439" vertREnd="16442" />
+	<Mesh name="_6" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="16938" batchCount="108" vertRStart="16443" vertREnd="16539" />
+	<Mesh name="_7" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="17046" batchCount="561" vertRStart="16540" vertREnd="17061">
+		<Mesh name="#_7" material="models/Ship1/Material__169.material.xml" batchStart="17607" batchCount="72" vertRStart="17062" vertREnd="17133" />
+		<Mesh name="#_7" material="models/Ship1/Material__340.material.xml" batchStart="17679" batchCount="6939" vertRStart="17134" vertREnd="23703" />
+		<Mesh name="#_7" material="models/Ship1/wood_59.material.xml" batchStart="24618" batchCount="402" vertRStart="23704" vertREnd="23834" />
+	</Mesh>
+	<Mesh name="_8" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="25020" batchCount="2016" vertRStart="23835" vertREnd="25784">
+		<Mesh name="#_8" material="models/Ship1/Material__342.material.xml" batchStart="27036" batchCount="78" vertRStart="25785" vertREnd="25862" />
+	</Mesh>
+	<Mesh name="_9" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="27114" batchCount="2016" vertRStart="25863" vertREnd="27842">
+		<Mesh name="#_9" material="models/Ship1/Material__342.material.xml" batchStart="29130" batchCount="78" vertRStart="27843" vertREnd="27920" />
+	</Mesh>
+	<Mesh name="_10" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="29208" batchCount="414" vertRStart="27921" vertREnd="28146">
+		<Mesh name="#_10" material="models/Ship1/wood_59.material.xml" batchStart="29622" batchCount="54" vertRStart="28147" vertREnd="28171" />
+	</Mesh>
+	<Mesh name="_11" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="29676" batchCount="2016" vertRStart="28172" vertREnd="30153">
+		<Mesh name="#_11" material="models/Ship1/Material__342.material.xml" batchStart="31692" batchCount="78" vertRStart="30154" vertREnd="30231" />
+	</Mesh>
+	<Mesh name="_12" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="31770" batchCount="13716" vertRStart="30232" vertREnd="42981" />
+	<Mesh name="_13" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="45486" batchCount="2016" vertRStart="42982" vertREnd="44923">
+		<Mesh name="#_13" material="models/Ship1/Material__342.material.xml" batchStart="47502" batchCount="78" vertRStart="44924" vertREnd="45001" />
+	</Mesh>
+	<Mesh name="_14" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="47580" batchCount="6" vertRStart="45002" vertREnd="45005" />
+	<Mesh name="_15" material="models/Ship1/metal_color_003.material.xml" rx="90" ry="0" rz="-0" batchStart="47586" batchCount="852" vertRStart="45006" vertREnd="45846" />
+	<Mesh name="_16" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="48438" batchCount="396" vertRStart="45847" vertREnd="46242" />
+	<Mesh name="_17" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="48834" batchCount="6564" vertRStart="46243" vertREnd="52670" />
+	<Mesh name="_18" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="55398" batchCount="516" vertRStart="52671" vertREnd="53067" />
+	<Mesh name="_19" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="55914" batchCount="1680" vertRStart="53068" vertREnd="54503" />
+	<Mesh name="_20" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="57594" batchCount="3048" vertRStart="54504" vertREnd="57401" />
+	<Mesh name="_21" material="models/Ship1/Material__342.material.xml" rx="90" ry="0" rz="-0" batchStart="60642" batchCount="78" vertRStart="57402" vertREnd="57479" />
+	<Mesh name="_22" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="60720" batchCount="1824" vertRStart="57480" vertREnd="58811">
+		<Mesh name="#_22" material="models/Ship1/wood_59.material.xml" batchStart="62544" batchCount="1656" vertRStart="58812" vertREnd="60334" />
+	</Mesh>
+	<Mesh name="_23" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="64200" batchCount="108" vertRStart="60335" vertREnd="60423" />
+	<Mesh name="_24" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="64308" batchCount="1332" vertRStart="60424" vertREnd="61691" />
+	<Mesh name="_25" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="65640" batchCount="2016" vertRStart="61692" vertREnd="63565" />
+	<Mesh name="_26" material="models/Ship1/_5___Default.material.xml" rx="90" ry="0" rz="-0" batchStart="67656" batchCount="225" vertRStart="63566" vertREnd="63796">
+		<Mesh name="#_26" material="models/Ship1/wood_59.material.xml" batchStart="67881" batchCount="240" vertRStart="63797" vertREnd="64036" />
+		<Mesh name="#_26" material="models/Ship1/Material__157.material.xml" batchStart="68121" batchCount="20841" vertRStart="64037" vertREnd="84855" />
+	</Mesh>
+	<Mesh name="_27" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="88962" batchCount="2016" vertRStart="84856" vertREnd="86709" />
+	<Mesh name="_28" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="90978" batchCount="17154" vertRStart="86710" vertREnd="103849" />
+	<Mesh name="_29" material="models/Ship1/arch48_003_plast.material.xml" rx="90" ry="0" rz="-0" batchStart="108132" batchCount="564" vertRStart="103850" vertREnd="104376" />
+	<Mesh name="_30" material="models/Ship1/arch48_003_metal.material.xml" rx="90" ry="0" rz="-0" batchStart="108696" batchCount="3126" vertRStart="104377" vertREnd="107440" />
+	<Mesh name="_31" material="models/Ship1/Material__342.material.xml" rx="90" ry="0" rz="-0" batchStart="111822" batchCount="78" vertRStart="107441" vertREnd="107518" />
+	<Mesh name="_32" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="111900" batchCount="6" vertRStart="107519" vertREnd="107522">
+		<Mesh name="#_32" material="models/Ship1/arch48_003_metal.material.xml" batchStart="111906" batchCount="882" vertRStart="107523" vertREnd="108100" />
+	</Mesh>
+	<Mesh name="_33" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="112788" batchCount="9" vertRStart="108101" vertREnd="108109" />
+	<Mesh name="_34" material="models/Ship1/Material__158.material.xml" rx="90" ry="0" rz="-0" batchStart="112797" batchCount="6" vertRStart="108110" vertREnd="108115" />
+	<Mesh name="_35" material="models/Ship1/metal_color_003.material.xml" rx="90" ry="0" rz="-0" batchStart="112803" batchCount="852" vertRStart="108116" vertREnd="108958" />
+</Model>

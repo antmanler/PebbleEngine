@@ -1,0 +1,3 @@
+<Model geometry="models/boat/boat.geo" name="boat">
+    <Mesh sx="0.005" vertREnd="3925" rx="90" sy="0.00499999" ry="0" sz="0.00500001" rz="-0" batchStart="0" name="" batchCount="4287" material="models/boat/Material.material.xml" vertRStart="0"/>
+</Model>

@@ -1,0 +1,5 @@
+<Material class="Translucent.Block">
+    <Shader source="shaders/model.shader"/>
+    <Uniform a="0.248645" name="matDiffuseCol" b="0.248645" c="0.248645" d="1"/>
+    <Uniform a="0.6440678" name="matSpecParams" b="0.6440678" c="0.6440678" d="0.976563"/>
+</Material>

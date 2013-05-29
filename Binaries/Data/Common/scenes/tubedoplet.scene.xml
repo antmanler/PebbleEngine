@@ -1,0 +1,27 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Stage">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="-15.4547" ty="6.01426" sx="1.00001" tz="11.6157" rx="-5.41947" sy="1.00001" leftPlane="-0.0736381" ry="-51.1019" sz="1.00001" rz="-0.557271" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py">
+                <Settings>
+                    <Setting key="show" value="false"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="1" tx="-20" ty="65" shadowContext="SHADOWMAP" tz="40" shadowMapBias="0.005" rx="-45" ry="-40" shadowMapCount="2" rz="0" col_R="1" radius="190" fov="90" shadowSplitLambda="0.5"/>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="1" tx="0" ty="0" shadowContext="SHADOWMAP" tz="-90" shadowMapBias="0.005" rx="0" ry="180" shadowMapCount="0" rz="180" col_R="1" radius="100" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="10" ty="-0.05" sy="10" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="10" name="floor"/>
+    <Reference tag="boundary" tx="0" sx="1.5" ty="4.5" sy="1.5" tz="0" sceneGraph="models/scenebox_m/scenebox_m.scene.xml" sz="1.5" name="tank"/>
+    <Reference tag="boundary" tx="0" sx="0.8" ty="4.60817" sy="1.5" tz="0" sceneGraph="models/cylinder_hi/cylinder_hi.scene.xml" sz="0.8" name="cylinderhi"/>
+    <Sph tag="fluid" tx="-4.47782" sx="8.95" ty="0.041197" sy="8.95" tz="-4.46395" sz="8.95" volumeData="sphscene/tube_init.fr" name="droplet" material="sphscene/tubedroplet.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="tube"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+</Group>

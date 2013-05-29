@@ -1,0 +1,5 @@
+<Material>
+	<Shader source="shaders/sph_utils.shader"/>
+	<Uniform name="blurParams" a="13.0" b="1.0" c="0.1" />
+	<Uniform name="blurV" a="1.0" b="0.0" c="0.0" />
+</Material>

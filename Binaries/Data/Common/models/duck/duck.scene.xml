@@ -1,0 +1,3 @@
+<Model geometry="models/duck/duck.geo" name="duck">
+    <Mesh sx="0.01" vertREnd="12635" rx="90" sy="0.01" ry="0" sz="0.01" rz="-0" batchStart="0" name="Mesh" batchCount="12636" material="models/duck/material_0.material.xml" vertRStart="0"/>
+</Model>

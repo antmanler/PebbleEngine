@@ -1,0 +1,42 @@
+<Model name="sponza" geometry="models/sponza/sponza.geo">
+
+	<Mesh name="" material="models/sponza/sp_00_vrata_kock.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="0" batchCount="720" vertRStart="0" vertREnd="503">
+		<Mesh name="#" material="models/sponza/sp_00_vrata_krug.material.xml" batchStart="720" batchCount="2439" vertRStart="504" vertREnd="2469" />
+	</Mesh>
+	<Mesh name="_2" material="models/sponza/sp_00_prozor.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="3159" batchCount="870" vertRStart="2470" vertREnd="3099" />
+	<Mesh name="_3" material="models/sponza/sp_00_zid.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="4029" batchCount="7515" vertRStart="3100" vertREnd="6466">
+		<Mesh name="#_3" material="models/sponza/sp_00_prozor.material.xml" batchStart="11544" batchCount="12" vertRStart="6467" vertREnd="6477" />
+		<Mesh name="#_3" material="models/sponza/sp_00_vrata_krug.material.xml" batchStart="11556" batchCount="2439" vertRStart="6478" vertREnd="8443" />
+	</Mesh>
+	<Mesh name="_4" material="models/sponza/sp_00_luk_mali.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="13995" batchCount="16704" vertRStart="8444" vertREnd="23965" />
+	<Mesh name="_5" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="30699" batchCount="24144" vertRStart="23966" vertREnd="46523" />
+	<Mesh name="_6" material="models/sponza/sp_01_stup_baza.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="54843" batchCount="14931" vertRStart="46524" vertREnd="57590" />
+	<Mesh name="_7" material="models/sponza/sp_00_luk_mal1.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="69774" batchCount="12096" vertRStart="57591" vertREnd="66224" />
+	<Mesh name="_8" material="models/sponza/sp_svod_kapitel.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="81870" batchCount="4368" vertRStart="66225" vertREnd="69488" />
+	<Mesh name="_9" material="models/sponza/sp_svod_kapitel.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="86238" batchCount="3060" vertRStart="69489" vertREnd="71820" />
+	<Mesh name="_10" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="89298" batchCount="6324" vertRStart="71821" vertREnd="77632" />
+	<Mesh name="_11" material="models/sponza/sp_00_svod.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="95622" batchCount="31110" vertRStart="77633" vertREnd="97483" />
+	<Mesh name="_12" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="126732" batchCount="25056" vertRStart="97484" vertREnd="119600" />
+	<Mesh name="_13" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="151788" batchCount="690" vertRStart="119601" vertREnd="119922" />
+	<Mesh name="_14" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="152478" batchCount="5100" vertRStart="119923" vertREnd="122722" />
+	<Mesh name="_15" material="models/sponza/sp_zid_vani.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="157578" batchCount="144" vertRStart="122723" vertREnd="122794" />
+	<Mesh name="_16" material="models/sponza/sp_01_stup.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="157722" batchCount="3300" vertRStart="122795" vertREnd="125166" />
+	<Mesh name="_17" material="models/sponza/sp_01_luk_a.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="161022" batchCount="1260" vertRStart="125167" vertREnd="125896" />
+	<Mesh name="_18" material="models/sponza/sp_02_reljef.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="162282" batchCount="48" vertRStart="125897" vertREnd="125914" />
+	<Mesh name="_19" material="models/sponza/sp_00_luk_mal1.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="162330" batchCount="1920" vertRStart="125915" vertREnd="127215" />
+	<Mesh name="_20" material="models/sponza/sp_00_stup.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="164250" batchCount="312" vertRStart="127216" vertREnd="127415" />
+	<Mesh name="_21" material="models/sponza/sp_00_svod.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="164562" batchCount="2712" vertRStart="127416" vertREnd="128715" />
+	<Mesh name="_22" material="models/sponza/sp_00_pod.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="167274" batchCount="210" vertRStart="128716" vertREnd="128795" />
+	<Mesh name="_23" material="models/sponza/sp_vijenac.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="167484" batchCount="2304" vertRStart="128796" vertREnd="130425" />
+	<Mesh name="_24" material="models/sponza/sp_00_luk_mali.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="169788" batchCount="4320" vertRStart="130426" vertREnd="132467" />
+	<Mesh name="_25" material="models/sponza/sp_01_stup.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="174108" batchCount="3456" vertRStart="132468" vertREnd="135613" />
+	<Mesh name="_26" material="models/sponza/sp_01_stub.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="177564" batchCount="192" vertRStart="135614" vertREnd="135741" />
+	<Mesh name="_27" material="models/sponza/sp_00_luk_mal1.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="177756" batchCount="2544" vertRStart="135742" vertREnd="137605" />
+	<Mesh name="_28" material="models/sponza/sp_01_stub_baza.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="180300" batchCount="2736" vertRStart="137606" vertREnd="139301" />
+	<Mesh name="_29" material="models/sponza/sp_00_stup.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="183036" batchCount="384" vertRStart="139302" vertREnd="139557" />
+	<Mesh name="_30" material="models/sponza/sp_01_stub_kut.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="183420" batchCount="144" vertRStart="139558" vertREnd="139661" />
+	<Mesh name="_31" material="models/sponza/sp_01_stub_baza_.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="183564" batchCount="1440" vertRStart="139662" vertREnd="140742" />
+	<Mesh name="_32" material="models/sponza/sp_svod_kapitel.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="185004" batchCount="10320" vertRStart="140743" vertREnd="149211" />
+	<Mesh name="_33" material="models/sponza/sp_00_luk_mali.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="195324" batchCount="3456" vertRStart="149212" vertREnd="152299" />
+	<Mesh name="_34" material="models/sponza/sp_00_luk_mali.material.xml" tx="0.00724006" ty="0.0933123" tz="0.00148997" rx="90" ry="0" rz="-0" batchStart="198780" batchCount="576" vertRStart="152300" vertREnd="152615" />
+</Model>

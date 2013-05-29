@@ -1,0 +1,6 @@
+<Material class="_editors_">
+    <Shader source="_editor_/shaders/editor.shader"/>
+    <Uniform a="0.5" name="NormalCol" b="0.5" c="0.5"/>
+    <Uniform a="1.0" name="SelectedCol" b="1.0" c="0.0"/>
+	<!-- <Uniform a="1.0" name="IsSeleced" /> -->
+</Material>

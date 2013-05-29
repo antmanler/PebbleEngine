@@ -1,0 +1,3 @@
+<Model geometry="models/tank/tank.geo" name="tank">
+    <Mesh vertREnd="23" batchStart="0" name="Tank" batchCount="36" material="models/tank/Material.material.xml" vertRStart="0"/>
+</Model>

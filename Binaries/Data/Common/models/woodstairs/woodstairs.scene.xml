@@ -1,0 +1,3 @@
+<Model geometry="models/woodstairs/woodstairs.geo" name="woodstairs">
+    <Mesh vertREnd="91" batchStart="0" name="Stairs" batchCount="108" material="models/woodstairs/Material.material.xml" vertRStart="0"/>
+</Model>

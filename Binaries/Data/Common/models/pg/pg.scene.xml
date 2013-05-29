@@ -1,0 +1,6 @@
+<Model name="pg" geometry="models/pg/pg.geo">
+
+	<Mesh name="Hello" material="models/pg/Material.001.material.xml" tx="-2.01611" ty="2.55214" tz="0.0142722" rx="90" ry="0" rz="-0" batchStart="0" batchCount="43320" vertRStart="0" vertREnd="10416" />
+	<Mesh name="PG" material="models/pg/Material.002.material.xml" tx="-2.01569" ty="0.349583" tz="0" rx="90" ry="0" rz="-0" batchStart="43320" batchCount="102984" vertRStart="10417" vertREnd="28973" />
+	<Mesh name="Cube" material="models/pg/Material.material.xml" sx="2" sy="0.25" sz="2" batchStart="146304" batchCount="3840" vertRStart="28974" vertREnd="29755" />
+</Model>

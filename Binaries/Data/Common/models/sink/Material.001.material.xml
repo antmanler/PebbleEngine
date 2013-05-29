@@ -1,0 +1,5 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <Sampler map="models/sink/Marble.jpg" name="albedoMap"/>
+    <Uniform a="0.7" name="matSpecParams" b="0.7" c="0.7" d="0.6"/>
+</Material>

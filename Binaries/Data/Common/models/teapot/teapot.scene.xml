@@ -1,0 +1,3 @@
+<Model geometry="models/teapot/teapot.geo" name="teapot">
+    <Mesh vertREnd="6481" rx="90" ry="0" rz="-0" batchStart="0" name="" batchCount="38880" material="models/teapot/Material.001.material.xml" vertRStart="0"/>
+</Model>

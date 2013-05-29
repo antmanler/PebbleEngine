@@ -1,0 +1,23 @@
+<!DOCTYPE HordeSceneGraph>
+<Group tx="0" ty="0" sx="1" tz="0" rx="0" sy="1" ry="0" sz="1" rz="0" name="Stage">
+    <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.0769799" topPlane="0.057735" name="camera" tx="-6.75239" ty="-9.24909" rightPlane="0.0769799" tz="6.56531" bottomPlane="-0.057735" rx="-5.66132" ry="-45.1319" rz="-0.877312" farPlane="800" occlusionCulling="1" pipeline="pipelines/sph.pipeline.xml" sx="0.999999">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+        </Attachment>
+        <Light lightingContext="LIGHTING" col_B="0.5686274509803921" shadowMapEnabled="false" name="Light2" material="materials/sph_light_fov60.material.xml" col_G="0.5686274509803921" tx="0" ty="0" shadowContext="SHADOWMAP" tz="0" shadowMapBias="0.005" rx="0" ry="0" shadowMapCount="0" rz="0" col_R="0.5686274509803921" radius="20" fov="90" shadowSplitLambda="0"/>
+    </Camera>
+    <!-- Setup Caustic light and camera -->
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="Light" material="materials/sph_light_fov60.material.xml" col_G="1" tx="22.2519" ty="25.2556" shadowContext="SHADOWMAP" tz="-22.2519" shadowMapBias="0.005" rx="-45" ry="135" shadowMapCount="1" rz="0" col_R="1" radius="400" fov="120" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="15" ty="0" sy="15" tz="0" sceneGraph="models/skybox/skybox_desert.scene.xml" sz="15" name="skybox"/>
+    <Terrain tx="-15" sx="30" ty="-12" sy="4" tz="-14.8" rx="0" sz="30" ry="0" rz="0" heightmap="terrains/terrain1hm.png" name="terrain" material="terrains/terrain1.material.xml" skirtHeight="0.01"/>
+    <Sph tx="-15.56" sx="30" ty="-15.07" sy="30" tz="-14.5" rx="0" sz="30" ry="0" volumeData="sphscene/frame_1080.fr" rz="0" name="Stream" material="sphscene/sph_flow_fov60.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="sphterrain"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tx="4.88064" sx="0.0001" ty="-6.56873" sy="0.0001" tz="-1.52427" rx="1.79489" sceneGraph="models/J10A/J10A.scene.xml" sz="0.0001" ry="-175.252" rz="-7.65491" name="J10"/>
+</Group>

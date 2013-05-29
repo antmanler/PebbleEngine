@@ -1,0 +1,9 @@
+<!DOCTYPE SceneConfiguration>
+<Setup>
+    <SceneGraph src="particles/particle.scene.xml"/>
+<Editor>
+    <LightParameters lightingcontext="LIGHTING" shadowcontext="SHADOWMAP" material="material/light.material.xml"/>
+    <Extras/>
+    <ActiveCamera name="Camera"/>
+</Editor>
+</Setup>

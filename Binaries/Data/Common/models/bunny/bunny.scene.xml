@@ -1,0 +1,3 @@
+<Model geometry="models/bunny/bunny.geo" name="bunny">
+    <Mesh vertREnd="207023" rx="90" ry="0" rz="-0" batchStart="0" name="Mesh" batchCount="208992" material="models/bunny/Material.001.material.xml" vertRStart="0"/>
+</Model>

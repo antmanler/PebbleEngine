@@ -1,0 +1,3 @@
+<Model geometry="_editor_/lightcone/lightcone.geo" name="__editor_lightcone__">
+    <Mesh vertREnd="159" rx="90" ry="0" rz="-0" batchStart="0" name="__editor_cone__" batchCount="192" material="_editor_/lightcone/lightcone.material.xml" vertRStart="0"/>
+</Model>

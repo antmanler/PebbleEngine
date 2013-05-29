@@ -1,0 +1,6 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+	<Sampler name="albedoMap" map="models/woodstairs/wood.jpg" />
+	<Uniform name="matSpecParams" a="0.2647059" b="0.2647059" c="0.2647059" d="0.390625" />
+</Material>

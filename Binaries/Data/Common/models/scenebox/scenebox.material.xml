@@ -1,0 +1,4 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <Sampler map="textures/common/white.tga" name="albedoMap"/>
+</Material>

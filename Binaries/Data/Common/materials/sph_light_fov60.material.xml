@@ -1,0 +1,8 @@
+<Material>
+    <ShaderFlag name="_F04_EnvMapping"/>
+    <Sampler map="models/skybox/stpeters.dds" mipmaps="true" name="envMap"/>
+    <Sampler map="textures/common/black.tga" name="causticMap"/>
+    <Shader source="shaders/sph_lighting.shader"/>
+    <Sampler map="textures/ambientMap.dds" name="ambientMap"/>
+	<Uniform name="cameraFov" a="60.0" />
+</Material>

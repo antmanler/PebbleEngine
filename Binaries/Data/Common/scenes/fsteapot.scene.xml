@@ -1,0 +1,9 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="NewScene1">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="-3.05622" ty="6.03227" sx="1.00001" tz="9.26740" rx="-32.35450" sy="1.00001" leftPlane="-0.0736381" ry="-48.22672" sz="1.00002" rz="-1.67897" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1"/>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="1" tx="0.00000" ty="18.20407" shadowContext="SHADOWMAP" tz="23.33889" shadowMapBias="0.005" rx="-53.25296" ry="0.00000" shadowMapCount="1" rz="0.00000" col_R="1" radius="300" fov="90" shadowSplitLambda="0"/>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="1" tx="0.00001" ty="0.00000" shadowContext="SHADOWMAP" tz="-31.15621" shadowMapBias="0.005" rx="0.00000" ry="180.00000" shadowMapCount="0" rz="180.00000" col_R="1" radius="100" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="2.50000" ty="-0.05" sy="2.50000" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="2.50000" name="floor"/>
+    <Sph tx="0.00000" sx="7.00000" ty="0.00000" sy="7.00000" tz="0.00000" sz="7.00000" volumeData="sphscene/dump_frame_240.fr" name="teawater" material="sphscene/sink.material.xml"/>
+    <Reference tx="3.15765" sx="0.38000" ty="1.10994" sy="0.38000" tz="3.38438" rx="0.00000" sceneGraph="models/teapot/teapot.scene.xml" sz="0.38000" ry="-0.38003" rz="0.00000" name="teapot1"/>
+</Group>

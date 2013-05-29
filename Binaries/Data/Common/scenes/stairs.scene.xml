@@ -1,0 +1,31 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Stage">
+    <Group tx="0" ty="0" tz="0" name="anchor">
+        <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="4.5234" ty="6.9127" tz="8.1198" rx="-20" leftPlane="-0.0552285" ry="30" rz="0" farPlane="200" name="MainCamera" rightPlane="0.0552285" nearPlane="0.1">
+            <Attachment type="Engine">
+                <Camera depth="1"/>
+                <!-- <PythonBehavior src="scripts/ShowStats.py"/> -->
+                <PythonBehavior src="scripts/CirOrbitCamera.py"/>
+            </Attachment>
+        </Camera>
+    </Group>
+    <Light lightingContext="LIGHTING" col_B="1" name="SunLight" material="materials/sph_light.material.xml" col_G="1" tx="0" ty="30" shadowContext="SHADOWMAP" tz="0" shadowMapBias="0.005" rx="-90" ry="0" shadowMapCount="1" rz="0" col_R="1" radius="50" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="0.3" ty="0.902" sy="0.3" tz="0" sceneGraph="models/plane/plane.scene.xml" sz="0.3" name="plane"/>
+    <Sph tag="fluid" tx="-2" sx="4" ty="0.9" sy="4" tz="-2" sz="4" volumeData="sphscene/frame_0.fr" name="boxwater" material="sphscene/sph2.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py" >
+				<Settings>
+			        <Setting key="fr_dir" value="stairs"/>
+			    </Settings>
+	        </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <!-- 	<Sph tag="fluid" tx="-1.5" sx="3" ty="2" sy="1" tz="-1.5" sz="3" volumeData="sphscene/box.fr" name="boxwater" material="sphscene/sph2.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py"/>
+        </Attachment>
+    </Sph> -->
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="FillLight" material="materials/sph_light.material.xml" col_G="1" tx="0.2007" ty="48.0845" shadowContext="SHADOWMAP" tz="26.5054" shadowMapBias="0.005" rx="-60" ry="0" shadowMapCount="0" rz="0" col_R="1" radius="90" fov="60" shadowSplitLambda="0"/>
+    <Reference tag="boundary" tx="0" sx="2" ty="2.9" sy="2" tz="0" sceneGraph="models/tank/tank.scene.xml" sz="2" name="tank"/>
+    <Reference tag="boundary" tx="0" sx="0.5" ty="1.33" sy="0.5" tz="0" rx="0" sceneGraph="models/woodstairs/woodstairs.scene.xml" sz="0.7" ry="180" rz="0" name="woodstairs"/>
+</Group>

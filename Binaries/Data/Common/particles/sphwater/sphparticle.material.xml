@@ -1,0 +1,6 @@
+<Material class="Translucent.Particle">
+	<!-- <Shader source="shaders/sphwater.shader"/> -->
+	<Shader source="shaders/particle.shader"/>
+	<Sampler name="albedoMap" map="textures/particles/particle1.tga" />
+	<!-- <Uniform name="sphereRadius" a="0.5" /> -->
+</Material>

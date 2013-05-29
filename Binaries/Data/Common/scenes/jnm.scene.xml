@@ -1,0 +1,38 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Stage">
+    <Camera sy="1.00002" sz="1.00004" nearPlane="0.1" leftPlane="-0.0552285" topPlane="0.0414214" name="MainCamera" tx="2.42911" ty="3.47467" rightPlane="0.0552285" tz="6.62298" bottomPlane="-0.0414214" rx="-8.72045" ry="22.4975" rz="-0.241057" farPlane="200" occlusionCulling="1" pipeline="pipelines/sph.pipeline.xml" sx="1.00003">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py">
+                <Settings>
+                    <Setting key="show" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="1" name="SunLight" material="materials/sph_light.material.xml" col_G="1" tx="-11.3765" ty="12.5836" shadowContext="SHADOWMAP" tz="3.19786" shadowMapBias="0.005" rx="-47.4469" ry="-75.411" shadowMapCount="2" rz="72.0441" col_R="1" radius="80" fov="90" shadowSplitLambda="0.5">
+        <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.133333" topPlane="0.1" name="light_camera" tx="0" ty="0" rightPlane="0.133333" tz="0" bottomPlane="-0.1" rx="0" ry="0" rz="0" farPlane="1000" occlusionCulling="1" pipeline="pipelines/caustic.pipeline.xml" sx="1">
+            <Attachment type="Engine">
+                <Camera depth="0" viewportX="1024" viewportY="1024"/>
+                <PythonBehavior src="scripts/CausticCamera.py">
+                    <Settings>
+                        <Setting key="light_shader_name" value="shaders/model.shader"/>
+                    </Settings>
+                </PythonBehavior>
+            </Attachment>
+        </Camera>
+    </Light>
+    <Sph tag="fluid" tx="-2" sx="4" ty="0.9" sy="4" tz="-2" sz="4" volumeData="sphscene/JNM300K.fr" name="JNM" material="sphscene/jnm.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="jnm"/>
+                    <Setting key="play" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tag="boundary" tx="0" sx="2" ty="2.899" sy="2" tz="0" rx="0" sceneGraph="models/tank/tank.scene.xml" sz="2" ry="0" rz="0" name="tank"/>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="FillLight" material="materials/sph_light.material.xml" col_G="1" tx="16.9832" ty="23.1924" shadowContext="SHADOWMAP" tz="-13.6337" shadowMapBias="0" rx="-45.3599" ry="146.021" shadowMapCount="0" rz="1.49673" col_R="1" radius="35" fov="60" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="0.5" ty="0.88" sy="0.5" tz="0" sceneGraph="models/platform/platform.scene.xml" sz="0.5" name="platform"/>
+</Group>

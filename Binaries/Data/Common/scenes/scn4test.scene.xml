@@ -1,0 +1,7 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Root">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="1.10843" ty="1.91805" sx="1.00001" tz="5.96236" rx="-10.72750" sy="1.00001" leftPlane="-0.0736381" ry="0.00000" sz="1.00002" rz="0.00000" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1"/>
+    <Light sy="1.00000" lightingContext="LIGHTING" sz="1.00000" col_B="1" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="1" tx="-1.39604" ty="6.29573" shadowContext="SHADOWMAP" tz="-7.91376" shadowMapBias="0.005" rx="-40.63682" ry="180.00000" shadowMapCount="1" rz="-180.00000" col_R="1" radius="20" fov="90" shadowSplitLambda="0" sx="1.00000"/>
+    <Light sy="1.00000" lightingContext="LIGHTING" sz="1.00000" col_B="1" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="1" tx="8.35837" ty="7.48938" shadowContext="SHADOWMAP" tz="10.88787" shadowMapBias="0.005" rx="-32.45271" ry="36.33936" shadowMapCount="0" rz="-180.00000" col_R="1" radius="20" fov="90" shadowSplitLambda="0" sx="1.00000"/>
+    <Reference tx="0" sx="2.80000" ty="-0.05" sy="2.80000" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="2.80000" name="floor"/>
+</Group>

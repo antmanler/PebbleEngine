@@ -1,0 +1,3 @@
+<Model geometry="models/armadillo/armadillo.geo" name="armadillo">
+    <Mesh vertREnd="207538" rx="90" ry="0" rz="-0" batchStart="0" name="Mesh" batchCount="207552" material="models/armadillo/armadillo.material.xml" vertRStart="0"/>
+</Model>

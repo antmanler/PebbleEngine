@@ -1,0 +1,61 @@
+<!DOCTYPE HordeSceneGraph>
+<Group tx="0" ty="0" sx="1" tz="0" rx="0" sy="1" ry="0" sz="1" rz="0" name="Stage">
+    <!-- Setup Caustic light and camera -->
+    <Light sy="1" sz="1" lightingContext="LIGHTING" col_B="0.85" name="SunSpot" material="materials/sph_light_fov60_caustic.material.xml" col_G="0.95" tx="17.32" ty="10" shadowContext="SHADOWMAP" tz="0" shadowMapBias="0.0025" rx="-30" ry="120" shadowMapCount="3" rz="0" col_R="0.95" radius="150" fov="90" shadowSplitLambda="0.5" sx="1">
+        <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.133333" topPlane="0.1" name="light_camera" tx="0" ty="0" rightPlane="0.133333" tz="0" bottomPlane="-0.1" rx="0" ry="0" rz="0" farPlane="1000" occlusionCulling="1" pipeline="pipelines/caustic.pipeline.xml" sx="1">
+            <Attachment type="Engine">
+                <Camera depth="0" viewportX="1024" viewportY="1024"/>
+                <PythonBehavior src="scripts/CausticCamera.py">
+                    <Settings>
+                        <Setting key="light_shader_name" value="shaders/model.shader"/>
+                        <Setting key="light_material_name" value="materials/sph_light_fov60_caustic.material.xml"/>
+                        <Setting key="main_camera_fov" value="60.0"/>
+                    </Settings>
+                </PythonBehavior>
+            </Attachment>
+        </Camera>
+    </Light>
+    <Light lightingContext="LIGHTING" col_B="0.610406652933547" shadowMapEnabled="false" name="FillLight" material="materials/sph_light.material.xml" col_G="0.610406652933547" tx="0" ty="8.61422" shadowContext="SHADOWMAP" tz="5.74341" shadowMapBias="0.001" rx="-53.0339" ry="0" shadowMapCount="0" rz="0" col_R="0.610406652933547" radius="15" fov="90" shadowSplitLambda="0"/>
+    <Sph tag="Fluid" tx="-2.3" ty="0" sx="2" tz="-1" sy="2" sz="2" volumeData="sphscene/frame_1000.fr" name="SphMc" material="sphscene/sph_mc.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="bunny/bunny122K"/>
+                    <Setting key="play" value="true"/>
+                </Settings>
+            </PythonBehavior>
+            
+			<PythonBehavior src="scripts/ScaleFieldGen.py">
+                <Settings>
+                    <Setting key="dll_name" value="scalefieldGen.dll"/>
+                    <Setting key="func_name" value="scaleFieldGenerator"/>
+                </Settings>
+            </PythonBehavior> 
+            
+        </Attachment>
+    </Sph>
+    <Sph tx="0.3" sx="2" ty="0" sy="2" tz="-1" sz="2" volumeData="sphscene/frame_1000.fr" name="SphPoint" material="sphscene/sph_pr.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="bunny/bunny122K"/>
+                    <Setting key="play" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Group tx="0" ty="0" tz="0" name="anchor">
+        <Camera sy="1.00001" sz="1.00001" nearPlane="0.1" leftPlane="-0.0769798" topPlane="0.057735" name="camera" tx="0" ty="1.2" rightPlane="0.0769798" tz="-4.5" bottomPlane="-0.057735" rx="0" ry="180" rz="0" farPlane="1000" occlusionCulling="1" pipeline="pipelines/sph.pipeline.xml" sx="1.00001">
+            <Attachment type="Engine">
+                <Camera depth="1"/>
+                <!-- <PythonBehavior src="scripts/CirOrbitCamera.py"/> -->
+                <PythonBehavior src="scripts/ShowStats.py">
+                    <Settings>
+                        <Setting key="show" value="true"/>
+                    </Settings>
+                </PythonBehavior>
+            </Attachment>
+        </Camera>
+    </Group>
+    <Reference tx="0" sx="2" ty="0" sy="2" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="2" name="floor"/>
+</Group>

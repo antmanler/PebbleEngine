@@ -1,0 +1,5 @@
+<Material>
+	<!-- <Sampler name="ambientMap" map="textures/ambientMapWhite.dds" /> -->
+	<Sampler name="spotLightMap" map="textures/spot_white.png" />
+	<Uniform name="bgColor" a="0.25" b="0.25" c="0.25" />
+</Material>

@@ -1,0 +1,6 @@
+<Model geometry="models/J10A/J10A.geo" name="J10A">
+    <Mesh vertREnd="184" batchStart="0" name="glass" batchCount="870" material="models/J10A/GLASS.material.xml" vertRStart="0"/>
+    <Mesh tx="0.155547" ty="-0.446469" vertREnd="17766" tz="0.110701" batchStart="870" name="fightbody" batchCount="91701" material="models/J10A/J10A.material.xml" vertRStart="185"/>
+    <Mesh vertREnd="19408" batchStart="92571" name="missile_right" batchCount="6720" material="models/J10A/LS-6.material.xml" vertRStart="17767"/>
+    <Mesh vertREnd="21050" batchStart="99291" name="missile_left" batchCount="6720" material="models/J10A/LS-6.material.xml" vertRStart="19409"/>
+</Model>

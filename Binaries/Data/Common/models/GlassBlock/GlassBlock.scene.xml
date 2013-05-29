@@ -1,0 +1,3 @@
+<Model geometry="models/GlassBlock/GlassBlock.geo" name="GlassBlock">
+    <Mesh sx="1" vertREnd="23" sy="1" sz="0.025" batchStart="0" name="Cube" batchCount="36" material="models/GlassBlock/glass.material.xml" vertRStart="0"/>
+</Model>

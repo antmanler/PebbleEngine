@@ -1,0 +1,5 @@
+<Material class="Translucent.Object">
+    <Shader source="shaders/model.shader"/>
+    <Sampler map="models/skybox/skybox_desert_lo.dds" name="envMap"/>
+    <Uniform a="0.01" name="matSpecParams" b="0.01" c="0.01" d="0.5"/>
+</Material>

@@ -1,0 +1,10 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <Uniform a="0.64" name="matDiffuseCol" b="0.64" c="0.64" d="1"/>
+    <Uniform a="0.5" name="matSpecParams" b="0.5" c="0.5" d="0.515625"/>
+    <Sampler map="textures/common/white.tga" name="albedoMap"/>
+    <Sampler map="textures/common/defnorm.tga" name="normalMap"/>
+    <Sampler map="textures/common/black.tga" name="causticMap"/>
+    <Sampler map="$TexCube" name="ambientMap"/>
+    <Sampler map="$TexCube" name="envMap"/>
+</Material>

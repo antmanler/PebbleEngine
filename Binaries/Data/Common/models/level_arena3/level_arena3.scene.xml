@@ -1,0 +1,43 @@
+<Model name="level_arena3" geometry="models/level_arena3/level_arena3.geo">
+
+	<Mesh name="" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="0" batchCount="1593" vertRStart="0" vertREnd="1592" />
+	<Mesh name="_2" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="1593" batchCount="1272" vertRStart="1593" vertREnd="2864" />
+	<Mesh name="_3" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="2865" batchCount="1359" vertRStart="2865" vertREnd="3449" />
+	<Mesh name="_4" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="4224" batchCount="1185" vertRStart="3450" vertREnd="4616" />
+	<Mesh name="_5" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="5409" batchCount="1449" vertRStart="4617" vertREnd="4874" />
+	<Mesh name="_6" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="6858" batchCount="990" vertRStart="4875" vertREnd="5828" />
+	<Mesh name="_7" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="7848" batchCount="1392" vertRStart="5829" vertREnd="6092" />
+	<Mesh name="_8" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="9240" batchCount="1029" vertRStart="6093" vertREnd="6288" />
+	<Mesh name="_9" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="10269" batchCount="2193" vertRStart="6289" vertREnd="6696" />
+	<Mesh name="_10" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="12462" batchCount="2193" vertRStart="6697" vertREnd="7910" />
+	<Mesh name="_11" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="14655" batchCount="1185" vertRStart="7911" vertREnd="9095" />
+	<Mesh name="_12" material="models/level_arena3/grass1.material.xml" tx="12.3225" ty="-0.296211" tz="-42.2094" rx="0" ry="-157.188" rz="0" sx="10.2741" sy="11.6868" sz="10.2741" batchStart="15840" batchCount="624" vertRStart="9096" vertREnd="9236">
+		<Mesh name="#_12" material="models/level_arena3/overhang1.material.xml" batchStart="16464" batchCount="291" vertRStart="9237" vertREnd="9312" />
+	</Mesh>
+	<Mesh name="_13" material="models/level_arena3/grass1.material.xml" tx="-43.5165" ty="1.29252" tz="-41.8445" rx="-0" ry="36.4333" rz="0" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="16755" batchCount="624" vertRStart="9313" vertREnd="9453">
+		<Mesh name="#_13" material="models/level_arena3/overhang1.material.xml" batchStart="17379" batchCount="291" vertRStart="9454" vertREnd="9529" />
+	</Mesh>
+	<Mesh name="_14" material="models/level_arena3/rock1.material.xml" tx="12.3225" ty="-0.296211" tz="-42.2094" rx="0" ry="-157.188" rz="0" sx="10.2741" sy="11.6868" sz="10.2741" batchStart="17670" batchCount="3312" vertRStart="9530" vertREnd="10342" />
+	<Mesh name="_15" material="models/level_arena3/rock1.material.xml" tx="-43.5165" ty="1.29252" tz="-41.8445" rx="-0" ry="36.4333" rz="0" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="20982" batchCount="3387" vertRStart="10343" vertREnd="11155" />
+	<Mesh name="_16" material="models/level_arena3/rock1.material.xml" tx="-1.65471" ty="-4.03089" tz="-108.354" rx="0" ry="-117.787" rz="0" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="24369" batchCount="3387" vertRStart="11156" vertREnd="11968" />
+	<Mesh name="_17" material="models/level_arena3/grass1.material.xml" tx="-1.65471" ty="-4.03089" tz="-108.354" rx="0" ry="-117.787" rz="0" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="27756" batchCount="624" vertRStart="11969" vertREnd="12109">
+		<Mesh name="#_17" material="models/level_arena3/overhang1.material.xml" batchStart="28380" batchCount="291" vertRStart="12110" vertREnd="12185" />
+	</Mesh>
+	<Mesh name="_18" material="models/level_arena3/grass1.material.xml" tx="-67.8746" ty="1.07828" tz="-93.7835" rx="0" ry="-160.332" rz="0" sx="10.2741" sy="16.1773" sz="10.2741" batchStart="28671" batchCount="624" vertRStart="12186" vertREnd="12326">
+		<Mesh name="#_18" material="models/level_arena3/overhang1.material.xml" batchStart="29295" batchCount="291" vertRStart="12327" vertREnd="12402" />
+	</Mesh>
+	<Mesh name="_19" material="models/level_arena3/rock1.material.xml" tx="-67.8746" ty="1.07828" tz="-93.7835" rx="0" ry="-160.332" rz="0" sx="10.2741" sy="16.1773" sz="10.2741" batchStart="29586" batchCount="3387" vertRStart="12403" vertREnd="13215" />
+	<Mesh name="_20" material="models/level_arena3/rock1.material.xml" tx="-2.82631" ty="1.27046" tz="130.095" rx="0" ry="-170.22" rz="0" sx="10.2741" sy="12.6357" sz="10.2741" batchStart="32973" batchCount="3387" vertRStart="13216" vertREnd="14028" />
+	<Mesh name="_21" material="models/level_arena3/grass1.material.xml" tx="-2.82631" ty="1.27046" tz="130.095" rx="0" ry="-170.22" rz="0" sx="10.2741" sy="12.6357" sz="10.2741" batchStart="36360" batchCount="624" vertRStart="14029" vertREnd="14169">
+		<Mesh name="#_21" material="models/level_arena3/overhang1.material.xml" batchStart="36984" batchCount="291" vertRStart="14170" vertREnd="14245" />
+	</Mesh>
+	<Mesh name="_22" material="models/level_arena3/rock1.material.xml" tx="-41.3409" ty="-0.296211" tz="105.428" rx="-0" ry="153.625" rz="0" sx="10.2741" sy="11.6868" sz="10.2741" batchStart="37275" batchCount="3312" vertRStart="14246" vertREnd="15058" />
+	<Mesh name="_23" material="models/level_arena3/grass1.material.xml" tx="-41.3409" ty="-0.296211" tz="105.428" rx="-0" ry="153.625" rz="0" sx="10.2741" sy="11.6868" sz="10.2741" batchStart="40587" batchCount="624" vertRStart="15059" vertREnd="15199">
+		<Mesh name="#_23" material="models/level_arena3/overhang1.material.xml" batchStart="41211" batchCount="291" vertRStart="15200" vertREnd="15275" />
+	</Mesh>
+	<Mesh name="_24" material="models/level_arena3/grass_006.material.xml" tx="-9.50542" ty="17.89" tz="-120.824" rx="-44.6721" ry="39.5518" rz="-4.2099" sx="8.89033" sy="10.1286" sz="10.0529" batchStart="41502" batchCount="5148" vertRStart="15276" vertREnd="20291" />
+	<Mesh name="_25" material="models/level_arena3/log_001.material.xml" tx="98.7679" ty="20.7058" tz="80.2234" rx="90" ry="0" rz="-108.607" sx="39.489" sy="39.489" sz="39.489" batchStart="46650" batchCount="3390" vertRStart="20292" vertREnd="20975" />
+	<Mesh name="_26" material="models/level_arena3/mountains1.material.xml" tx="-166.888" ty="53.9611" tz="-54.5189" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="50040" batchCount="2208" vertRStart="20976" vertREnd="21387" />
+	<Mesh name="_27" material="models/level_arena3/Material.001.material.xml" tx="203.808" ty="101.021" tz="133.037" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="52248" batchCount="384" vertRStart="21388" vertREnd="21537" />
+	<Mesh name="_28" material="models/level_arena3/red_boulders1.material.xml" tx="-13.0168" ty="3.34522" tz="-19.034" sx="10.2741" sy="10.2741" sz="10.2741" batchStart="52632" batchCount="345" vertRStart="21538" vertREnd="21601" />
+</Model>

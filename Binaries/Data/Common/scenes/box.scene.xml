@@ -1,0 +1,15 @@
+<!DOCTYPE HordeSceneGraph>
+<Group tx="0" ty="0" sx="1" tz="0" rx="0" sy="1" ry="0" sz="1" rz="0" name="Stage">
+    <!-- <Attachment type="Engine">
+        <PythonBehavior src="scripts/RecvMsg.py"/>
+    </Attachment> -->
+    <Camera pipeline="pipelines/forward.pipeline.xml" tx="-34.90805" ty="12.09302" sx="1" occlusionCulling="1" tz="-24.22215" rx="-9.78542" sy="1" ry="-112.72997" sz="1" rz="-0.18657" name="camera">
+        <Attachment type="Engine">
+            <Camera depth="0"/>
+            <PythonBehavior src="scripts/JumpCamera.py"/>
+        </Attachment>
+    </Camera>
+    <Reference tx="0" ty="0" sx="200.00000" tz="0" rx="0.00000" sy="200.00000" ry="0.00000" sz="200.00000" sceneGraph="models/skybox/skybox.scene.xml" rz="0.00000" name="Skybox"/>
+    <Reference tx="0.00000" ty="0.00000" sx="1.0" tz="0.00000" rx="0.00000" sy="1" ry="130.00000" sz="1" sceneGraph="models/domino/domino.scene.xml" rz="0.00000" name="Domino"/>
+    <Light sy="1.00000" lightingContext="DIRLIGHTING" sz="1.00000" col_B="1" shadowMapEnabled="true" name="Sun" col_G="1" tx="40.58926" ty="78.25998" shadowContext="SHADOWMAP" tz="-52.31091" shadowMapBias="0.0007" rx="-45.00000" ry="135.00000" shadowMapCount="1" rz="0.00000" col_R="1" radius="300" fov="0" shadowSplitLambda="50" sx="1.00000"/>
+</Group>

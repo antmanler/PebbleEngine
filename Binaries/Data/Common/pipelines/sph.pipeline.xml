@@ -1,0 +1,199 @@
+<Pipeline>
+	<Setup>
+		<!-- <RenderTarget id="GBUFFER" depthBuf="true" numColBufs="4" format="RGBA16F" scale="1.0" maxSamples="0"/> -->
+		<RenderTarget id="PGBUFFER" depthBuf="true" numColBufs="1" format="RGBA32F" scale="1.0" maxSamples="0"/>
+		<RenderTarget id="TEMP_BLUR_BUF" depthBuf="false" numColBufs="1" format="RGBA32F" scale="1.0" maxSamples="0"/>
+		
+		<RenderTarget id="BGBUFFER" depthBuf="true" numColBufs="1" format="RGBA16F" scale="1.0" maxSamples="4"/>
+		
+		<RenderTarget id="THICKBUFFER" depthBuf="true" numColBufs="1" format="RGBA16F" scale="1.0" maxSamples="0"/>
+		<RenderTarget id="TEMP_BLUR_BUF2" depthBuf="false" numColBufs="1" format="RGBA16F" scale="1.0" maxSamples="0"/>
+		
+		<RenderTarget id="FINALIMAGE" depthBuf="true" numColBufs="1" format="RGBA16F" scale="1.0" maxSamples="4"/>
+		<!-- <RenderTarget id="HDRBUF" depthBuf="true" numColBufs="1" format="RGBA16F" scale="1.0" maxSamples="16" />
+		<RenderTarget id="BLURBUF1" depthBuf="false" numColBufs="1" format="RGBA8" scale="0.25" />
+		<RenderTarget id="BLURBUF2" depthBuf="false" numColBufs="1" format="RGBA8" scale="0.25" /> -->
+	</Setup>
+	
+	<CommandQueue>
+		<!-- <Stage id="Attribpass">
+			<SwitchTarget target="GBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" colBuf1="true" colBuf2="true" colBuf3="true" />
+			<DrawGeometry context="ATTRIBPASS" class="~Translucent" />
+		</Stage> -->
+		
+		<Stage id="LightingBackground" link="pipelines/forwardGlobalSettings.material.xml">
+			<SwitchTarget target="BGBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" col_R="0.25" col_G="0.25" col_B="0.25"/>
+			<DrawGeometry context="AMBIENT" class="~Translucent" />
+			<DoForwardLightLoop class="~Translucent" />
+		</Stage>
+		
+		<Stage id="PaticleAttibpass">
+			<SwitchTarget target="PGBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" />
+			
+			<!-- Copy depth -->
+			<!-- <BindBuffer sampler="depthBuf" sourceRT="GBUFFER" bufIndex="32" /> -->
+			<BindBuffer sampler="depthBuf" sourceRT="BGBUFFER" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			
+			<!-- Draw SPH particles -->
+			<DrawGeometry context="ATTRIBPASS" class="Translucent.Sph" />
+			<UnbindBuffers />
+		</Stage>
+		
+		<!-- <Stage id="RenderingBackground" link="pipelines/globalSettings.material.xml">
+			<SwitchTarget target="BGBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" />
+			
+			<BindBuffer sampler="depthBuf" sourceRT="PGBUFFER" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			<UnbindBuffers />
+			
+			<BindBuffer sampler="gbuf0" sourceRT="GBUFFER" bufIndex="0" />
+			<BindBuffer sampler="gbuf1" sourceRT="GBUFFER" bufIndex="1" />
+			<BindBuffer sampler="gbuf2" sourceRT="GBUFFER" bufIndex="2" />
+			<BindBuffer sampler="gbuf3" sourceRT="GBUFFER" bufIndex="3" />
+			<DrawQuad material="materials/sph_light.material.xml" context="AMBIENT" class="~Translucent" />
+			<DoDeferredLightLoop />
+			<UnbindBuffers />
+		</Stage> -->
+		
+		<!-- Blur the  depth -->
+		<Stage id="BilateralBlur">
+			<SwitchTarget target="TEMP_BLUR_BUF" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="0.0" b="1.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="BILATERALBLUR" />
+			
+			<SwitchTarget target="PGBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="TEMP_BLUR_BUF" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="1.0" b="1.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="BILATERALBLUR" />
+			<UnbindBuffers />
+		</Stage>
+		
+		<!-- <Stage id="CurvatureFlow">
+			<SwitchTarget target="TEMP_BLUR_BUF" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="CURVFLOW" />
+
+			<SwitchTarget target="PGBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="TEMP_BLUR_BUF" bufIndex="0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="CURVFLOW" />
+			<UnbindBuffers />
+		</Stage> -->
+		
+		<!-- Render thickness -->
+		<Stage id="RenderThickness" >
+			<SwitchTarget target="THICKBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" colBuf1="true" />
+			<BindBuffer sampler="depthBuf" sourceRT="BGBUFFER" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			<DrawGeometry context="THICKNESSPASS" class="Translucent.Sph" />
+			
+			<!-- Blur thickness -->
+			<!-- <SwitchTarget target="TEMP_BLUR_BUF2" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="THICKBUFFER" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="0.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="GAUSSBLUR" />
+			<SwitchTarget target="THICKBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="TEMP_BLUR_BUF2" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="1.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="GAUSSBLUR" />
+			<UnbindBuffers /> -->
+		</Stage>
+		
+		<!-- Lighting -->
+		<Stage id="SPHLighting"  link="pipelines/globalSettings.material.xml">			
+			<!-- <SwitchTarget target="HDRBUF" /> -->
+			<SwitchTarget target="FINALIMAGE" />
+			<!-- <SwitchTarget target="" /> -->
+			<ClearTarget depthBuf="true" colBuf0="true"/>
+			<BindBuffer sampler="depthBuf" sourceRT="BGBUFFER" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			<BindBuffer sampler="buf0" sourceRT="BGBUFFER" bufIndex="0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_TEXTURE" />
+			
+			<BindBuffer sampler="gbuf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<BindBuffer sampler="gbuf2" sourceRT="BGBUFFER" bufIndex="0" />
+			<BindBuffer sampler="gbuf3" sourceRT="THICKBUFFER" bufIndex="0" />
+			<DoDeferredLightLoop context="SPHLIGHTING" />
+			<UnbindBuffers />
+		</Stage>
+		
+		<Stage id="LightingTransparent"  link="pipelines/globalSettings.material.xml">
+			<!-- Render transparent -->
+			<DoForwardLightLoop class="Translucent.Object" order="BACK_TO_FRONT" noShadows="true"/>
+			<DoForwardLightLoop class="Translucent.Block" context="LIGHTING_CULLNONE" order="BACK_TO_FRONT" noShadows="true"/>
+		</Stage>
+		
+		<Stage id="Combination">
+			<SwitchTarget target="" />
+			<ClearTarget depthBuf="true" colBuf0="true"/>
+			<BindBuffer sampler="depthBuf" sourceRT="FINALIMAGE" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			
+			<BindBuffer sampler="buf0" sourceRT="FINALIMAGE" bufIndex="0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_TEXTURE" />
+			<UnbindBuffers />
+		</Stage>
+
+		<!-- <Stage id="FXAA">
+			<SwitchTarget target="" />
+			<BindBuffer sampler="buf0" sourceRT="FINALIMAGE" bufIndex="0" />
+			<DrawQuad material="materials/fxaa.material.xml" context="FXAA" />
+			<UnbindBuffers />
+		</Stage> -->
+		
+		<!-- HDR post processing -->
+		<!-- <Stage id="BrightPass">
+			<SwitchTarget target="BLURBUF1" />
+			<BindBuffer sampler="buf0" sourceRT="HDRBUF" bufIndex="0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="BRIGHTPASS" />
+			<UnbindBuffers />
+		</Stage>
+		
+		<Stage id="Bloom">
+			<SwitchTarget target="BLURBUF2" />
+			<BindBuffer sampler="buf0" sourceRT="BLURBUF1" bufIndex="0" />
+			<SetUniform material="pipelines/postHDR.material.xml" uniform="blurParams" a="0.0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="BLUR" />
+			<SwitchTarget target="BLURBUF1" />
+			<BindBuffer sampler="buf0" sourceRT="BLURBUF2" bufIndex="0" />
+			<SetUniform material="pipelines/postHDR.material.xml" uniform="blurParams" a="1.0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="BLUR" />
+			<SwitchTarget target="BLURBUF2" />
+			<BindBuffer sampler="buf0" sourceRT="BLURBUF1" bufIndex="0" />
+			<SetUniform material="pipelines/postHDR.material.xml" uniform="blurParams" a="2.0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="BLUR" />
+			<SwitchTarget target="BLURBUF1" />
+			<BindBuffer sampler="buf0" sourceRT="BLURBUF2" bufIndex="0" />
+			<SetUniform material="pipelines/postHDR.material.xml" uniform="blurParams" a="3.0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="BLUR" />
+			<UnbindBuffers />
+		</Stage>
+		
+		<Stage id="Combination">
+			<SwitchTarget target="" />
+			<BindBuffer sampler="buf0" sourceRT="HDRBUF" bufIndex="0" />
+			<BindBuffer sampler="buf1" sourceRT="BLURBUF1" bufIndex="0" />
+			<DrawQuad material="pipelines/postHDR.material.xml" context="FINALPASS" />
+			<UnbindBuffers />
+		</Stage> -->
+		
+		<Stage id="Overlays">
+			<SwitchTarget target="" />
+			<DrawOverlays context="OVERLAY" />
+		</Stage>
+		
+	</CommandQueue>
+	
+</Pipeline>

@@ -1,0 +1,3 @@
+<Model geometry="models/cylinder_hi/cylinder_hi.geo" name="cylinder_hi">
+    <Mesh vertREnd="12287" batchStart="0" name="tube" batchCount="73728" material="models/cylinder_hi/solidtube.material.xml" vertRStart="0"/>
+</Model>

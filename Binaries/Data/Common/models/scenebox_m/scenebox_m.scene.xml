@@ -1,0 +1,3 @@
+<Model geometry="models/scenebox_m/scenebox_m.geo" name="scenebox_m">
+    <Mesh sx="3" vertREnd="1733" sy="3" sz="3" batchStart="0" name="Cube" batchCount="9216" material="models/scenebox_m/cube.material.xml" vertRStart="0"/>
+</Model>

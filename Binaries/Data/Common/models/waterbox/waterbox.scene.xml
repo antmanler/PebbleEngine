@@ -1,0 +1,3 @@
+<Model geometry="models/waterbox/waterbox.geo" name="waterbox">
+    <Mesh vertREnd="485" batchStart="0" name="" batchCount="2304" material="models/waterbox/mat.material.xml" vertRStart="0"/>
+</Model>

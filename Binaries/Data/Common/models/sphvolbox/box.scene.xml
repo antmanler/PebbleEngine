@@ -1,0 +1,4 @@
+<Model name="sphvolbox" geometry="models/sphvolbox/box.geo">
+
+	<Mesh name="SPHBox" material="models/sphvolbox/box.material.xml" batchStart="0" batchCount="36" vertRStart="0" vertREnd="23" />
+</Model>

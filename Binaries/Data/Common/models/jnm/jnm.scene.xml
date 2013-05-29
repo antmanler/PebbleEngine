@@ -1,0 +1,6 @@
+<Model name="jnm" geometry="models/jnm/jnm.geo">
+
+	<Mesh name="Text" material="models/jnm/Material.001.material.xml" tx="-2.01611" ty="2.55214" tz="0.0142722" rx="90" ry="0" rz="-0" batchStart="0" batchCount="37368" vertRStart="0" vertREnd="8335" />
+	<Mesh name="JNM" material="models/jnm/Material.002.material.xml" tx="-2.01569" ty="0.349583" tz="0" rx="90" ry="0" rz="-0" sx="0.74979" sy="1" sz="1" batchStart="37368" batchCount="29682" vertRStart="8336" vertREnd="14295" />
+	<Mesh name="Cube" material="models/jnm/Material.material.xml" sx="2" sy="0.25" sz="2" batchStart="67050" batchCount="3840" vertRStart="14296" vertREnd="15077" />
+</Model>

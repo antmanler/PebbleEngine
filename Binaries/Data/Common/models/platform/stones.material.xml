@@ -1,0 +1,13 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <ShaderFlag name="_F07_CausticMapping"/>
+    <ShaderFlag name="_F03_ParallaxMapping"/>
+    <Sampler map="textures/models/layingrock.jpg" name="albedoMap"/>
+    <!-- <Sampler name="albedoMap" map="textures/models/floor_wood.jpg" /> -->
+    <!-- <Sampler name="albedoMap" map="textures/models/field_stone.jpg" /> -->
+    <!-- <Sampler name="albedoMap" map="textures/models/rock.jpg" /> -->
+    <Sampler map="textures/models/layingrockBump.tga" name="normalMap" allowCompression="false"/>
+    <!-- <Sampler name="normalMap" map="textures/models/floor_wood_bump.jpg" allowCompression="false" /> -->
+    <!-- <Sampler name="normalMap" map="textures/models/field_stone_bump.jpg" allowCompression="false" /> -->
+    <!-- <Sampler name="normalMap" map="textures/models/rock_bump.tga" allowCompression="false" /> -->
+</Material>

@@ -1,0 +1,4 @@
+<Model name="stairs_one" geometry="models/stairs_one/stairs_one.geo">
+
+	<Mesh name="Mesh" material="models/stairs_one/Material.001.material.xml" rx="90" ry="0" rz="-0" batchStart="0" batchCount="36" vertRStart="0" vertREnd="23" />
+</Model>

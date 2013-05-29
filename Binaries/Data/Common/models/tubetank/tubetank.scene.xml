@@ -1,0 +1,5 @@
+<Model name="tubetank" geometry="models/tubetank/tubetank.geo">
+
+	<Mesh name="Cube" material="models/tubetank/Material.004.material.xml" sx="2" sy="2" sz="2" batchStart="0" batchCount="36" vertRStart="0" vertREnd="23" />
+	<Mesh name="Cylinder" material="models/tubetank/Material.005.material.xml" tx="0" ty="-0.5" tz="0" sx="0.3" sy="0.5" sz="0.3" batchStart="36" batchCount="19968" vertRStart="24" vertREnd="3351" />
+</Model>

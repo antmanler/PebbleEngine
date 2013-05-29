@@ -1,0 +1,12 @@
+<!DOCTYPE SceneSetup>
+<Setup>
+    <SceneGraph src="scenes/stairs.scene.xml">
+		<EngineConfig shadowMapSize="1024" maxNumMessages="1024" sampleCount="4" maxAnisotropy="4" />
+	</SceneGraph>
+    <Editor>
+        <Pipeline path="pipelines/forward.pipeline.xml"/>
+        <LightParameters lightingcontext="LIGHTING" shadowcontext="SHADOWMAP" material="materials/light.material.xml"/>
+        <ActiveCamera name="MainCamera"/>
+    </Editor>
+    <Extras/>
+</Setup>

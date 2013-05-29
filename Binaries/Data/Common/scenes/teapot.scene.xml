@@ -1,0 +1,46 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Root">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="3.77964" ty="3.27168" sx="1.00001" tz="-1.47932" rx="-33.22252" sy="1.00001" leftPlane="-0.0736381" ry="131.93484" sz="1.00002" rz="1.40571" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py">
+                <Settings>
+                    <Setting key="show" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="0.8627450980392157" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="0.8627450980392157" tx="0.00000" ty="8.14856" shadowContext="SHADOWMAP" tz="12.88838" shadowMapBias="0.02" rx="-50.03514" ry="0.00000" shadowMapCount="2" rz="0.00000" col_R="0.8627450980392157" radius="30" fov="90" shadowSplitLambda="0.8"/>
+    <Light sy="1.00000" lightingContext="LIGHTING" sz="1.00000" col_B="1" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="0.9725490196078431" tx="-15.11623" ty="11.32571" shadowContext="SHADOWMAP" tz="-4.62666" shadowMapBias="0.02" rx="-32.53487" ry="-103.44360" shadowMapCount="2" rz="7.32563" col_R="0.9411764705882353" radius="30" fov="90" shadowSplitLambda="0.8" sx="1.00000"/>
+    <Reference tx="0" sx="5.00000" ty="-0.05" sy="5.00000" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="5.00000" name="floor"/>
+    <Sph tag="rigid" tx="1.00000" sx="2.50000" ty="1.00000" sy="2.50000" tz="1.00000" rx="0.00000" sz="2.50000" ry="0.00000" volumeData="sphscene/teapot.fr" rz="0.00000" name="teapot_" material="sphscene/sph_solid.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/HideMe.py">
+                <Settings>
+                    <Setting key="hide" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tx="1.29421" sx="0.10000" ty="1.01268" sy="0.10000" tz="1.20326" sceneGraph="models/teapot/teapot.scene.xml" sz="0.10000" name="teapot">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/HideMe.py">
+                <Settings>
+                    <Setting key="hide" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Reference>
+    <Sph tag="fluid" tx="0.00000" sx="2.00000" ty="0.00000" sy="2.00000" tz="0.00000" rx="0.00000" sz="2.00000" ry="0.00000" volumeData="sphscene/test4rf_frame_320.fr" rz="0.00000" name="fluid" material="sphscene/sph_4rf.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFilesEx.py">
+                <Settings>
+                    <Setting key="fr_dir" value="teapot"/>
+                    <Setting key="play" value="true"/>
+                    <Setting key="template" value="0:models/teapot/teapot.scene.xml;0.035400;1.319199;0.013151;0.1;0.1;0.1;2;2;2"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tag="boundary" tx="1.00000" sx="1.00000" ty="0.99319" sy="1.00000" tz="1.00000" sceneGraph="models/tank/tank.scene.xml" sz="1.00000" name="box"/>
+</Group>

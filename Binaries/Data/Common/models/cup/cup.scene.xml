@@ -1,0 +1,3 @@
+<Model geometry="models/cup/cup.geo" name="cup">
+    <Mesh vertREnd="6985" rx="90" ry="0" rz="-0" batchStart="0" name="" batchCount="41904" material="models/cup/Material.001.material.xml" vertRStart="0"/>
+</Model>

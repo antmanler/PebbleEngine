@@ -1,0 +1,6 @@
+<Model geometry="models/platform/platform.geo" name="platform">
+    <Mesh vertREnd="193" rx="-0" ry="0" rz="180" batchStart="0" name="Cone01" batchCount="576" material="models/platform/stones.material.xml" vertRStart="0"/>
+    <Attachment type="GameEngine" name="Boden">
+        <BulletPhysics mass="0" static_friction="10" kinematic="1" shape="mesh" restitution="1"/>
+    </Attachment>
+</Model>

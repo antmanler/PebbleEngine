@@ -1,0 +1,14 @@
+<Material class="Translucent.Sph">
+    <Shader source="shaders/sph_fluid.shader"/>
+    <!-- <Uniform a="0.05" name="pointSize"/> -->
+    <Uniform a="0.055000" name="PointParams" b="350.000000" c="1.500000" d="0.1"/>
+    <Uniform a="1.33" name="refractIdx"/>
+    <Uniform a="0.990000" name="FluidColor" b="0.990000" c="0.990000" d="1.000000"/>
+    <Uniform a="2" name="absorptionIdx" b="0.8" c="0.45" d="1"/>
+    <!-- <Uniform name="FluidColor" a="0.0" b="0.0" c="0.0" d="1.5" /> -->
+    <!-- <Uniform name="absorptionIdx" a="0.01" b="0.01" c="0.01" d="0.0" /> -->
+    <Sampler map="$Tex2D" name="spotLightMap"/>
+    <Sampler map="$Tex2D" name="buf0"/>
+    <Sampler map="$Tex2D" name="buf1"/>
+    <Sampler map="$Tex2D" name="buf2"/>
+</Material>

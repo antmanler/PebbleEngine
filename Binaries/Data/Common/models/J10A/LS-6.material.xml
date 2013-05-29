@@ -1,0 +1,5 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <Uniform a="0.07000000000000001" name="matSpecParams" b="0.07000000000000001" c="0.07000000000000001" d="1"/>
+    <Sampler map="models/J10A/ls6.jpg" name="albedoMap"/>
+</Material>

@@ -1,0 +1,10 @@
+<!-- Forward Shading Pipeline -->
+<Pipeline>
+	<CommandQueue>
+		<Stage id="Geometry">
+			<!-- <ClearTarget depthBuf="true" colBuf0="true" /> -->
+			<DrawGeometry context="_EDITOR_" class="_editors_" />
+			<!-- <DoForwardLightLoop class="_editors_" /> -->
+		</Stage>
+	</CommandQueue>
+</Pipeline>

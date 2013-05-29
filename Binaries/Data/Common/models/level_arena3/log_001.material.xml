@@ -1,0 +1,6 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+	<Sampler name="albedoMap" map="models/level_arena3/trees_log_001_col.png" />
+	<Uniform name="matSpecParams" a="2" b="2" c="2" d="1.84375" />
+</Material>

@@ -1,0 +1,48 @@
+<!DOCTYPE HordeSceneGraph>
+<Group tx="0" ty="0" sx="1" tz="0" rx="0" sy="1" ry="0" sz="1" rz="0" name="Stage">
+    <!-- Setup Caustic light and camera -->
+    <Light sy="1" sz="1" lightingContext="LIGHTING" col_B="0.85" name="SunSpot" material="materials/sph_light.material.xml" col_G="0.95" tx="10.519" ty="12.9903" shadowContext="SHADOWMAP" tz="-7.22398" shadowMapBias="0.001" rx="-40" ry="120" shadowMapCount="2" rz="0" col_R="0.95" radius="100" fov="90" shadowSplitLambda="0.5" sx="1">
+        <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.133333" topPlane="0.1" name="light_camera" tx="0" ty="0" rightPlane="0.133333" tz="0" bottomPlane="-0.1" rx="0" ry="0" rz="0" farPlane="1000" occlusionCulling="1" pipeline="pipelines/caustic.pipeline.xml" sx="1">
+            <Attachment type="Engine">
+                <Camera depth="0" viewportX="1024" viewportY="1024"/>
+                <PythonBehavior src="scripts/CausticCamera.py">
+                    <Settings>
+                        <Setting key="light_shader_name" value="shaders/model.shader"/>
+                        <!-- <Setting key="light_material_name" value="materials/sph_light.material.xml"/> -->
+                    </Settings>
+                </PythonBehavior>
+            </Attachment>
+        </Camera>
+    </Light>
+    <Reference tx="0" ty="0" sx="20" tz="0" rx="0" sy="20" ry="0" sz="20" sceneGraph="models/skybox/skybox_stpeters.scene.xml" rz="0" name="skybox">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/SphSkybox.py"/>
+        </Attachment>
+    </Reference>
+    <Reference tx="0" ty="0" sx="0.08" tz="0" rx="0" sy="0.08" ry="0" sz="0.08" sceneGraph="models/platform/platform.scene.xml" rz="0" name="env"/>
+    <Sph tag="Fluid" tx="-1" ty="0" sx="2.0" tz="-1" sy="2.0" sz="2.0" volumeData="sphscene/frame_1000.fr" name="Fluid" material="sphscene/sph1.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="bunny/bunny122K"/>
+                    <Setting key="play" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Group tx="0" ty="0" tz="0" name="anchor">
+        <Camera pipeline="pipelines/sph.pipeline.xml" tx="-4.01382" ty="1.72583" sx="1" occlusionCulling="1" tz="2.42723" rx="-15.2692" sy="1" ry="-57.1146" sz="1" rz="0.195002" name="camera">
+            <Attachment type="Engine">
+                <Camera depth="1"/>
+                <PythonBehavior src="scripts/CirOrbitCamera.py"/>
+                <PythonBehavior src="scripts/ShowStats.py">
+                    <Settings>
+                        <Setting key="show" value="true"/>
+                    </Settings>
+                </PythonBehavior>
+            </Attachment>
+        </Camera>
+    </Group>
+    <Light lightingContext="LIGHTING" col_B="0.610406652933547" shadowMapEnabled="false" name="FillLight" material="materials/sph_light.material.xml" col_G="0.610406652933547" tx="0" ty="6.82321" shadowContext="SHADOWMAP" tz="3.46775" shadowMapBias="0.005" rx="-53.0339" ry="0" shadowMapCount="0" rz="0" col_R="0.610406652933547" radius="15" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="1" ty="0.99" sy="1" tz="0" sceneGraph="models/tank/tank.scene.xml" sz="1" name="tank"/>
+</Group>

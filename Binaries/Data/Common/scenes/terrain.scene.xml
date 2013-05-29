@@ -1,0 +1,18 @@
+<!DOCTYPE HordeSceneGraph>
+<Group tx="0" ty="0" sx="1" tz="0" rx="0" sy="1" ry="0" sz="1" rz="0" name="Stage">
+    <!-- <Camera name="camera" pipeline="pipelines/sph.pipeline.xml" tx="-2.0" ty="1.2" tz="-6.5" rx="-13" ry="-170" rz="0" sx="1" sy="1" sz="1" occlusionCulling="1"> -->
+    <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.0769799" topPlane="0.057735" name="camera" tx="-5" ty="-9" rightPlane="0.0769799" tz="1" bottomPlane="-0.057735" rx="-15" ry="-60" rz="0" farPlane="1500" occlusionCulling="1" pipeline="pipelines/forward.pipeline.xml" sx="1">
+        <Attachment type="Engine">
+            <Camera fov="45.0" depth="1"/>
+        </Attachment>
+    </Camera>
+    <!-- Setup Caustic light and camera -->
+    <!-- <Reference name="volBox" tx="-1.0" ty="0.0" tz="-1.0" sx="2.0" sy="2.0" sz="2.0"  sceneGraph="sphscene/sph1.scene.xml" /> -->
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="Light" material="materials/light.material.xml" col_G="1" tx="23" ty="23" shadowContext="SHADOWMAP" tz="-23" shadowMapBias="0.005" rx="-45" ry="135" shadowMapCount="1" rz="51.8407" col_R="1" radius="100" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="15" ty="0" sy="15" tz="0" sceneGraph="models/skybox/skybox_desert.scene.xml" sz="15" name="skybox"/>
+    <Terrain tx="-15" sx="30" ty="-12" sy="4" tz="-15" rx="0" sz="30" ry="0" rz="0" heightmap="terrains/terrain1hm.png" name="terrain" material="terrains/terrain1.material.xml" skirtHeight="0.01"/>
+    <Reference tag="boundary" tx="0" sx="14.5" ty="-12" sy="14.5" tz="0" sceneGraph="models/terrain1geo/terrain1geo.scene.xml" sz="14.5" name="terrgeo"/>
+    <Reference tag="boundary" tx="0" sx="30" ty="-15" sy="30" tz="0" sceneGraph="models/scenebox/scenebox.scene.xml" sz="30" name="scenebox"/>
+    <Reference tx="5.92132" sx="1" ty="-8.07479" sy="1" tz="-7.8855" sceneGraph="models/waterbox/waterbox.scene.xml" sz="1" name="water"/>
+    <Sph tag="fluid" tx="1.21386" sx="10" ty="-9.14152" sy="10" tz="-11.2216" sz="10" volumeData="sphscene/thinbox.fr" name="waterf" material="sphscene/sph_solid.material.xml"/>
+</Group>

@@ -1,0 +1,8 @@
+<Material>
+    <Shader source="shaders/terrain.shader"/>
+    <ShaderFlag name="_F02_NormalMapping"/>
+    <Sampler map="terrains/terrain1hm.png" name="heightNormMap" allowCompression="false"/>
+    <Sampler map="terrains/grass_texture.png" name="detailMap"/>
+    <Sampler map="terrains/grass_normals.png" name="normalMap" allowCompression="false"/>
+    <Uniform a="-1" name="sunDir" b="-1" c="1" d="0"/>
+</Material>

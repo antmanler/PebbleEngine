@@ -1,0 +1,16 @@
+<!DOCTYPE SceneSetup>
+<Setup>
+    <SceneGraph src="scenes/twowater.scene.xml">
+        <EngineConfig sampleCount="4" maxAnisotropy="4" shadowMapSize="1024" maxNumMessages="1024"/>
+    </SceneGraph>
+    <Settings>
+        <Setting key="ResourceRepositry" value="../../Data/Common"/>
+        <Setting key="gravity" value="-9.81"/>
+    </Settings>
+    <Editor>
+        <Pipeline path="pipelines/forward.pipeline.xml"/>
+        <LightParameters lightingcontext="LIGHTING" shadowcontext="SHADOWMAP" material="materials/light.material.xml"/>
+        <ActiveCamera name="MainCam"/>
+        <Extras/>
+    </Editor>
+</Setup>

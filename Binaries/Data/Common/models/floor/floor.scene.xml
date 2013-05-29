@@ -1,0 +1,3 @@
+<Model geometry="models/floor/floor.geo" name="floor">
+    <Mesh sx="7.5" vertREnd="255" sy="1" sz="7.5" batchStart="0" name="Plane" batchCount="384" material="models/floor/floor.material.xml" vertRStart="0"/>
+</Model>

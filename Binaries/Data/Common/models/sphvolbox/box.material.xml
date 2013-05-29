@@ -1,0 +1,5 @@
+<Material class="SPH">
+	<Shader source="shaders/sphvol.shader"/>
+	
+	<Sampler name="volMap" map="models/skybox/skybox.dds" />
+</Material>

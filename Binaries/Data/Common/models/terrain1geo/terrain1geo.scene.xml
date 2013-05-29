@@ -1,0 +1,3 @@
+<Model geometry="models/terrain1geo/terrain1geo.geo" name="terrain1geo">
+    <Mesh sx="1.00518" vertREnd="65534" sy="1" sz="1.00518" batchStart="0" name="" batchCount="390144" material="models/terrain1geo/Material.001.material.xml" vertRStart="0"/>
+</Model>

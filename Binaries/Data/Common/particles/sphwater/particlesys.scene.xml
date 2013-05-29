@@ -1,0 +1,12 @@
+<Group>
+	<Emitter name="SphWaterParticles" material="particles/sphwater/sphparticle.material.xml"
+		     particleEffect="particles/sphwater/sph.particle.xml"
+			 maxCount="50000" 
+			 respawnCount="-1"
+			 delay="0"
+			 emissionRate="15000"
+			 spreadAngle="30"
+			 forceX="0"
+			 forceY="-1.5"
+			 forceZ="0" />
+</Group>

@@ -1,0 +1,12 @@
+<!DOCTYPE SceneSetup>
+<Setup>
+    <SceneGraph src="scenes/scn4test.scene.xml">
+        <EngineConfig sampleCount="4" maxAnisotropy="4" shadowMapSize="1024" maxNumMessages="1024"/>
+    </SceneGraph>
+    <Editor>
+        <Pipeline path="pipelines/forward.pipeline.xml"/>
+        <LightParameters lightingcontext="LIGHTING" shadowcontext="SHADOWMAP" material="materials/light.material.xml"/>
+        <ActiveCamera name="MainCam"/>
+    </Editor>
+    <Extras/>
+</Setup>

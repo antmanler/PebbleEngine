@@ -1,0 +1,6 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+	<Sampler name="albedoMap" map="models/sponza/PROZOR1.JPG" />
+	<Uniform name="matSpecParams" a="0" b="0" c="0" d="0.390625" />
+</Material>

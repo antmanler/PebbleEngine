@@ -1,0 +1,7 @@
+<Model geometry="models/sphere/sphere.geo" name="sphere">
+    <Mesh vertREnd="587" batchStart="0" name="Sphere01" batchCount="2880" material="models/sphere/stones.material.xml" vertRStart="0">
+        <Attachment type="GameEngine" name="Global">
+            <BulletPhysics mass="0" shape="mesh"/>
+        </Attachment>
+    </Mesh>
+</Model>

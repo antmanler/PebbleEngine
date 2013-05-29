@@ -1,0 +1,9 @@
+<Material class="Translucent.Sph">
+    <Shader source="shaders/sph_fluid.shader"/>
+    <!-- <Uniform a="0.15" name="pointSize"/> -->
+    <Uniform a="0.18" name="PointParams" b="480" c="4" d="0.1"/>
+    <Uniform a="1.5" name="refractIdx"/>
+    <Uniform a="0.29" name="FluidColor" b="0.89" c="0.99" d="1"/>
+    <Uniform a="1.2" name="absorptionIdx" b="0.9" c="0.5" d="1"/>
+    <Uniform a="60.0" name="cameraFov" b="0" c="0" d="0"/>
+</Material>

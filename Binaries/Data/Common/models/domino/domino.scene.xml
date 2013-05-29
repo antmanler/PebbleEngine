@@ -1,0 +1,82 @@
+<Model geometry="models/domino/domino.geo" name="Domino">
+    <Mesh tx="18.0211" ty="0.39021" sx="1" vertREnd="23" tz="9.36409" rx="-0" sy="1" ry="70.4512" sz="1" rz="0" batchStart="0" name="Cube_011" batchCount="36" material="models/domino/domino.material.xml" vertRStart="0">
+        <Attachment type="Engine" name="DominoStein_1">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="2" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="18.5721" ty="0.39021" sx="1" vertREnd="47" tz="8.01711" rx="0" sy="1" ry="-105" sz="1" rz="0" batchStart="36" name="Cube_010" batchCount="36" material="models/domino/domino.material.xml" vertRStart="24">
+        <Attachment type="Engine" name="DominoStein_2">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="18.9395" ty="0.39021" sx="1" vertREnd="71" tz="6.48646" rx="-0" sy="1" ry="79.9999" sz="1" rz="0" batchStart="72" name="Cube_009" batchCount="36" material="models/domino/domino.material.xml" vertRStart="48">
+        <Attachment type="Engine" name="DominoStein_3">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="19.1844" ty="0.39021" sx="0.999997" vertREnd="95" tz="5.38438" rx="0" sy="1" ry="-92.963" sz="0.999997" rz="0" batchStart="108" name="Cube_008" batchCount="36" material="models/domino/domino.material.xml" vertRStart="72">
+        <Attachment type="Engine" name="DominoStein_4">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="19.2456" ty="0.39021" sx="0.999997" vertREnd="119" tz="4.09863" rx="-0" sy="1" ry="-88.5801" sz="0.999997" rz="0" batchStart="144" name="Cube_007" batchCount="36" material="models/domino/domino.material.xml" vertRStart="96">
+        <Attachment type="Engine" name="DominoStein_5">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="18.97560" ty="0.39021" vertREnd="143" tz="2.81416" rx="-0" ry="-67.2855" rz="0" batchStart="180" name="Cube_006" batchCount="36" material="models/domino/domino.material.xml" vertRStart="120">
+        <Attachment type="Engine" name="DominoStein_6">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="17.0721" ty="0.39021" vertREnd="167" tz="0.7618" rx="-0" ry="-36.8699" rz="0" batchStart="216" name="Cube_005" batchCount="36" material="models/domino/domino.material.xml" vertRStart="144">
+        <Attachment type="Engine" name="DominoStein_7">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="18.26082" ty="0.39021" sx="1" vertREnd="191" tz="1.60454" rx="-0" sy="1" ry="-53.9728" sz="1" rz="0" batchStart="252" name="Cube_004" batchCount="36" material="models/domino/domino.material.xml" vertRStart="168">
+        <Attachment type="Engine" name="DominoStein_8">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="15.9292" ty="0.39021" sx="0.999259" vertREnd="215" tz="0.11893" rx="-0" sy="1" ry="-26.0751" sz="1" rz="0" batchStart="288" name="Cube_003" batchCount="36" material="models/domino/domino.material.xml" vertRStart="192">
+        <Attachment type="Engine" name="DominoStein_9">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="14.63702" ty="0.39021" sx="0.99926" vertREnd="239" tz="-0.12598" sy="1" sz="1" batchStart="324" name="Cube_002" batchCount="36" material="models/domino/domino.material.xml" vertRStart="216">
+        <Attachment type="Engine" name="DominoStein_10">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="1.15461" ty="10.53510" sx="1" vertREnd="311" tz="-0.09844" rx="-0" sy="1" ry="0" sz="1" rz="52.7922" batchStart="360" name="tube" batchCount="108" material="models/domino/tube.material.xml" vertRStart="240">
+        <Attachment type="Engine" name="tube_1">
+            <BulletPhysics mass="0" shape="mesh"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="1.15461" ty="10.53510" sx="1" vertREnd="383" tz="-0.09844" rx="-0" sy="1" ry="0" sz="1" rz="52.7922" batchStart="468" name="tube_001" batchCount="108" material="models/domino/tube.material.xml" vertRStart="312">
+        <Attachment type="Engine" name="tube_2">
+            <BulletPhysics mass="0" shape="mesh"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="13.41756" ty="0.39021" sx="0.99926" vertREnd="407" tz="-0.12598" sy="1" sz="1" batchStart="576" name="Cube_001" batchCount="36" material="models/domino/domino.material.xml" vertRStart="384">
+        <Attachment type="Engine" name="DominoStein_11">
+            <BulletPhysics x="0.20715" y="1.42379" z="1.02134" mass="1" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="-16.2124" ty="20.758" sx="1" vertREnd="431" tz="-0.27565" rx="0.501346" sy="1" ry="-0.500793" sz="0.999996" rz="-11.0506" batchStart="612" name="Brett" batchCount="36" material="models/domino/domino.material.xml" vertRStart="408">
+        <Attachment type="Engine" name="Bridge">
+            <BulletPhysics x="6.65773" y="0.27008" z="1" mass="0" shape="box"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="11.2451" ty="0" vertREnd="687" tz="0.06994" batchStart="648" name="Plane" batchCount="384" material="models/domino/plane.material.xml" vertRStart="432">
+        <Attachment type="Engine" name="Boden">
+            <BulletPhysics mass="0" static_friction="10" kinematic="1" shape="mesh" restitution="1"/>
+        </Attachment>
+    </Mesh>
+    <Mesh tx="-21.3353" ty="23.7017" vertREnd="4719" tz="-0.250167" batchStart="1032" name="YelloSphere" batchCount="5952" material="models/domino/sphere.material.xml" vertRStart="688">
+        <Attachment type="Engine" name="Ball">
+            <BulletPhysics radius="0.59856" mass="0.5" static_friction="5.5" shape="sphere" restitution="0.06000000000000001"/>
+        </Attachment>
+    </Mesh>
+</Model>

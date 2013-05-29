@@ -1,0 +1,8 @@
+<!-- <Model name="plane" geometry="models/plane/plane.geo"> 
+
+	<Mesh name="planeMesh" material="models/plane/plane.material.xml" batchStart="0" batchCount="6" vertRStart="0" vertREnd="3" />
+</Model> -->
+<Model geometry="models/platform/platform.geo" name="plane">
+    <Mesh vertREnd="193" rx="-0" ry="0" rz="180" batchStart="0" name="planeMesh" batchCount="576" material="models/plane/plane.material.xml" vertRStart="0"/>
+    <!-- <Mesh name="planeMesh" material="models/plane/plane.material.xml" batchStart="0" batchCount="36" vertRStart="0" vertREnd="23" /> -->
+</Model>

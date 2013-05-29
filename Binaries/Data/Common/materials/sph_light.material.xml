@@ -1,0 +1,8 @@
+<Material>
+    <ShaderFlag name="_F04_EnvMapping"/>
+    <ShaderFlag name="_F07_CausticMapping"/>
+    <Sampler map="models/skybox/stpeters.dds" mipmaps="true" name="envMap"/>
+    <Sampler map="textures/common/black.tga" name="causticMap"/>
+    <Shader source="shaders/sph_lighting.shader"/>
+    <!-- <Sampler map="textures/ambientMap.dds" name="ambientMap"/> -->
+</Material>

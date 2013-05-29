@@ -1,0 +1,23 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Stage">
+    <Camera sy="1" sz="1" nearPlane="0.1" leftPlane="-0.0552285" topPlane="0.0414214" name="MainCamera" tx="5.98456" ty="4.45446" rightPlane="0.0552285" tz="8.2039" bottomPlane="-0.0414214" rx="-10.5979" ry="36.3892" rz="0.883549" farPlane="500" occlusionCulling="1" pipeline="pipelines/sph.pipeline.xml" sx="1">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py"/>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="1" name="SunLight" material="materials/sph_light.material.xml" col_G="1" tx="0" ty="26.8801" shadowContext="SHADOWMAP" tz="-1.85962e-07" shadowMapBias="0.005" rx="-90" ry="0" shadowMapCount="1" rz="0" col_R="1" radius="50" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="0.3" ty="0.902" sy="0.3" tz="0" sceneGraph="models/plane/plane.scene.xml" sz="0.3" name="plane"/>
+    <Sph tag="fluid" tx="-1.97" sx="4" ty="2.12" sy="4" tz="-1.8" rx="0" sz="4" ry="0" volumeData="sphscene/watercube_2.fr" rz="-90" name="boxwater" material="sphscene/sph2.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="tank"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="FillLight" material="materials/sph_light.material.xml" col_G="1" tx="0.2007" ty="48.0845" shadowContext="SHADOWMAP" tz="26.5054" shadowMapBias="0" rx="-55.7575" ry="0" shadowMapCount="0" rz="0" col_R="1" radius="90" fov="60" shadowSplitLambda="0"/>
+    <Reference tag="boundary" tx="0" sx="2" ty="2.9" sy="2" tz="0" sceneGraph="models/tank/tank.scene.xml" sz="2" name="tank"/>
+    <Sph tag="rigid" tx="-0.5" sx="4.00000" ty="3.5" sy="4.00000" tz="-0.5" sz="4.00000" volumeData="sphscene/duck_solid.fr" name="duck" material="sphscene/sph_solid.material.xml"/>
+</Group>

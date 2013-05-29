@@ -1,0 +1,4 @@
+<Model name="box_hi" geometry="models/box_hi/box_hi.geo">
+
+	<Mesh name="Cube" material="models/box_hi/Material.material.xml" batchStart="0" batchCount="36864" vertRStart="0" vertREnd="7029" />
+</Model>

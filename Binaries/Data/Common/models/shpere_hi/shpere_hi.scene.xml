@@ -1,0 +1,4 @@
+<Model name="shpere_hi" geometry="models/shpere_hi/shpere_hi.geo">
+
+	<Mesh name="" material="models/shpere_hi/default.material.xml" batchStart="0" batchCount="97536" vertRStart="0" vertREnd="16257" />
+</Model>

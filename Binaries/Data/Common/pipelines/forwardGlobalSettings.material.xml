@@ -1,0 +1,4 @@
+<Material link="pipelines/globalSettings.material.xml">
+	<Sampler name="ambientMap" map="textures/ambientMapWhite.dds" />
+	<Uniform name="ambientIntensity" a="0.65" />
+</Material>

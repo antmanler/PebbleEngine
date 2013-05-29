@@ -1,0 +1,5 @@
+<Material>
+	<ShaderFlag name="_F04_EnvMapping"/>
+	<Sampler name="envMap" map="models/skybox/skybox.dds" />
+	<Shader source="shaders/deferredLighting.shader"/>
+</Material>

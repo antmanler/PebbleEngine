@@ -1,0 +1,13 @@
+<Material class="Translucent.Sph">
+    <!-- Inject a geometry shader for marching cube -->
+    <ShaderFlag scaleFieldExtendX="128" scaleFieldExtendY="128" scaleFieldExtendZ="128" name="_F16_McGeometryShaderInjected" cubeExtend="64">
+        <GeometryShaderInject contextName="ATTRIBPASS" geomSrc="shaders/marchingcube.glsl"/>
+        <GeometryShaderInject contextName="DEPTHPASS" geomSrc="shaders/marchingcube.glsl"/>
+    </ShaderFlag>
+    <Shader source="shaders/sph_fluid.shader"/>
+    <Uniform a="0.05" name="PointParams" b="320" c="1" d="0.1"/>
+    <Uniform a="1.33" name="refractIdx"/>
+    <Uniform a="0.99" name="FluidColor" b="0.99" c="0.99" d="1"/>
+    <Uniform a="2" name="absorptionIdx" b="0.8" c="0.45" d="1"/>
+    <Uniform a="7" name="isolevel"/>
+</Material>

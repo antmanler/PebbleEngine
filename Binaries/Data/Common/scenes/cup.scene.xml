@@ -1,0 +1,55 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Root">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="4.48606" ty="2.06437" sx="1.00001" tz="-1.95860" rx="-11.61009" sy="1.00001" leftPlane="-0.0736381" ry="131.75890" sz="1.00002" rz="1.75677" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py">
+                <Settings>
+                    <Setting key="show" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="0.9411764705882353" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="0.9803921568627451" tx="0.00000" ty="8.11256" shadowContext="SHADOWMAP" tz="16.43987" shadowMapBias="0.02" rx="-50.03514" ry="0.00000" shadowMapCount="2" rz="0.00000" col_R="1" radius="25" fov="90" shadowSplitLambda="0.6"/>
+    <Light sy="1.00000" lightingContext="LIGHTING" sz="1.00000" col_B="0.9411764705882353" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="0.9803921568627451" tx="-12.42447" ty="9.59064" shadowContext="SHADOWMAP" tz="-3.98657" shadowMapBias="0.02" rx="-32.53487" ry="-103.44360" shadowMapCount="2" rz="7.32563" col_R="1" radius="30" fov="90" shadowSplitLambda="0.6" sx="1.00000"/>
+    <Reference tx="0" sx="5.00000" ty="-0.05" sy="5.00000" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="5.00000" name="floor"/>
+    <Reference tx="0.94130" sx="0.15000" ty="0.00000" sy="0.15000" tz="0.99438" sceneGraph="models/cup/cup.scene.xml" sz="0.15000" name="cup">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/HideMe.py">
+                <Settings>
+                    <Setting key="hide" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Reference>
+    <Sph tag="rigid" tx="0.72296" sx="4.80000" ty="-0.01745" sy="4.80000" tz="0.77570" sz="4.80000" volumeData="sphscene/cup.fr" name="cup_" material="sphscene/sph_solid.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/HideMe.py">
+                <Settings>
+                    <Setting key="hide" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Sph tag="fluid" tx="0.00000" sx="2.00000" ty="1.45690" sy="2.00000" tz="0.00000" rx="0.00000" sz="2.00000" ry="0.00000" volumeData="sphscene/thinbox.fr" rz="0.00000" name="fluid_" material="sphscene/sph_4rf.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/HideMe.py">
+                <Settings>
+                    <Setting key="hide" value="true"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tag="boundary" tx="1.00000" sx="1.00000" ty="0.99319" sy="1.00000" tz="1.00000" sceneGraph="models/tank/tank.scene.xml" sz="1.00000" name="box"/>
+    <Sph tag="" tx="0.00000" sx="2.00000" ty="-0.00266" sy="2.00000" tz="0.00000" rx="0.00000" sz="2.00000" ry="0.00000" volumeData="sphscene/thinbox.fr" rz="0.00000" name="fluid" material="sphscene/sph_4rf.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFilesEx.py">
+                <Settings>
+                    <Setting key="fr_dir" value="cup"/>
+                    <Setting key="play" value="true"/>
+                    <Setting key="template" value="0:models/cup/cup.scene.xml;0.028240;2.989587;-0.020107;0.15;0.15;0.15;2;2;2"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+</Group>

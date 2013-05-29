@@ -1,0 +1,5 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+	<Sampler name="albedoMap" map="models/level_arena3/generic_redrock_col.jpg" />
+</Material>

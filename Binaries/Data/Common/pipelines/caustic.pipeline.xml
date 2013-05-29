@@ -1,0 +1,64 @@
+<Pipeline>
+	<Setup>
+		<RenderTarget id="GBUFFER" depthBuf="true" numColBufs="1" format="RGBA8" scale="1.0" />
+		<RenderTarget id="PGBUFFER" depthBuf="true" numColBufs="1" format="RGBA8" scale="2.0" />	
+		<RenderTarget id="TEMPBUFFER" depthBuf="false" numColBufs="1" format="RGBA8" scale="2.0" />
+		<!-- <RenderTarget id="NORMBUFFER" depthBuf="false" numColBufs="1" format="RGBA32F" scale="1.0" /> -->
+		<!-- <RenderTarget id="CBUFFER" depthBuf="false" numColBufs="1" format="RGBA32F" scale="1.0" /> -->
+	</Setup>
+	
+	<CommandQueue>
+		<Stage id="Depthpass">
+			<!-- Draw background -->
+			<SwitchTarget target="GBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" />
+			<DrawGeometry context="DEPTHPASS"  class="~Translucent" />
+			
+			<!-- Draw particle geometry -->
+			<SwitchTarget target="PGBUFFER" />
+			<ClearTarget depthBuf="true" colBuf0="true" />
+			<!-- Copy depth -->
+			<BindBuffer sampler="depthBuf" sourceRT="GBUFFER" bufIndex="32" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="COPY_DEPTH" />
+			<UnbindBuffers />
+		
+			<!-- Draw particles -->
+			<DrawGeometry context="DEPTHPASS" class="Translucent.Sph" />
+		</Stage>
+		
+		<!-- Blur the  depth -->
+		<Stage id="BilateralBlur">
+			<SwitchTarget target="TEMPBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="0.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="BILATERALBLUR" />
+			
+			<SwitchTarget target="PGBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="TEMPBUFFER" bufIndex="0" />
+			<SetUniform material="materials/sph_utils.material.xml" uniform="blurV" a="1.0" />
+			<DrawQuad material="materials/sph_utils.material.xml" context="BILATERALBLUR" />
+			
+			<UnbindBuffers />
+		</Stage>
+		
+		<Stage id="Caustic"  link="pipelines/globalSettings.material.xml">
+			<!-- Render caustic map -->
+			<!-- <SwitchTarget target="CBUFFER" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<BindBuffer sampler="buf1" sourceRT="GBUFFER" bufIndex="0" />
+			<DrawGeometry context="CAUSTICMAP" class="Translucent.Sph" /> -->
+			
+			<SwitchTarget target="" />
+			<ClearTarget colBuf0="true" />
+			<BindBuffer sampler="buf0" sourceRT="PGBUFFER" bufIndex="0" />
+			<BindBuffer sampler="buf1" sourceRT="GBUFFER" bufIndex="0" />
+			<DrawGeometry context="CAUSTICMAP" class="Translucent.Sph" />
+			
+			<UnbindBuffers />
+		</Stage>
+		
+	</CommandQueue>
+</Pipeline>

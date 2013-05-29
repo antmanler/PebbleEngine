@@ -1,0 +1,6 @@
+<Material>
+    <Shader source="shaders/model.shader"/>
+    <Sampler map="models/J10A/J-10A.JPG" name="albedoMap"/>
+    <Sampler map="models/skybox/skybox_desert_lo.dds" name="envMap"/>
+    <Uniform a="0.05" name="matSpecParams" b="0.05" c="0.05" d="0.7"/>
+</Material>

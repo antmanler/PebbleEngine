@@ -1,0 +1,6 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+
+	<Uniform name="matDiffuseCol" a="0.8631574" b="0.3662526" c="0.08228271" d="1" />
+	<Uniform name="matSpecParams" a="0.009259265" b="0.009259265" c="0.009259265" d="0.234375" />
+</Material>

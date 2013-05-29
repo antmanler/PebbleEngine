@@ -1,0 +1,26 @@
+<!DOCTYPE HordeSceneGraph>
+<Group name="Stage">
+    <Camera pipeline="pipelines/sph.pipeline.xml" topPlane="0.0414214" bottomPlane="-0.0414214" tx="16.8364" ty="16.7376" sx="1.00002" tz="10.7599" rx="-35.9638" sy="1.00002" leftPlane="-0.0736381" ry="58.8211" sz="1.00002" rz="-0.199639" farPlane="500" name="MainCam" rightPlane="0.0736381" nearPlane="0.1">
+        <Attachment type="Engine">
+            <Camera depth="1"/>
+            <PythonBehavior src="scripts/ShowStats.py">
+                <Settings>
+                    <Setting key="show" value="false"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Camera>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="sun" material="materials/sph_light.material.xml" col_G="1" tx="45.9937" ty="55.5503" shadowContext="SHADOWMAP" tz="29.47" shadowMapBias="0.005" rx="-58.688" ry="48.7691" shadowMapCount="2" rz="15.4417" col_R="1" radius="190" fov="90" shadowSplitLambda="0.5"/>
+    <Light lightingContext="LIGHTING" col_B="1" shadowMapEnabled="false" name="bglight" material="materials/sph_light.material.xml" col_G="1" tx="-90" ty="0" shadowContext="SHADOWMAP" tz="0" shadowMapBias="0.005" rx="0" ry="-90" shadowMapCount="0" rz="0" col_R="1" radius="100" fov="90" shadowSplitLambda="0"/>
+    <Reference tx="0" sx="10" ty="-0.05" sy="10" tz="0" sceneGraph="models/floor/floor.scene.xml" sz="10" name="floor"/>
+    <Sph tag="fluid" tx="-4.4778" sx="8.95" ty="0.041197" sy="8.95" tz="-4.46395" rx="0" sz="8.95" ry="0" volumeData="sphscene/sink_0.fr" rz="0" name="water" material="sphscene/sink.material.xml">
+        <Attachment type="Engine">
+            <PythonBehavior src="scripts/PlayFrFiles.py">
+                <Settings>
+                    <Setting key="fr_dir" value="sink"/>
+                </Settings>
+            </PythonBehavior>
+        </Attachment>
+    </Sph>
+    <Reference tx="-4.55122" sx="9" ty="-0.0282316" sy="9" tz="-4.5595" sceneGraph="models/sink/sink.scene.xml" sz="9" name="sink"/>
+</Group>
